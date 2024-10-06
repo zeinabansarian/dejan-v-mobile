@@ -707,11 +707,11 @@ color: #8F993C;
 font-family: "EncodeSans600";
 }
 
-.activeFilterList{
+.activeFilterList a{
   background-color: #8F993C;
   border: 1px solid #8F993C;
 }
-.activeFilterList a{
+.activeFilterList a span ,.activeFilterList a h1 {
   color: white;
 
 }
