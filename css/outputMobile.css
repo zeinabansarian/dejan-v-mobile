@@ -681,12 +681,12 @@ video {
   right: 1rem;
 }
 
-.top-0 {
-  top: 0px;
-}
-
 .right-\[1em\] {
   right: 1em;
+}
+
+.top-0 {
+  top: 0px;
 }
 
 .top-\[1em\] {
@@ -835,12 +835,28 @@ video {
   margin-top: 1em;
 }
 
+.mt-\[2em\] {
+  margin-top: 2em;
+}
+
 .mt-auto {
   margin-top: auto;
 }
 
-.mt-\[2em\] {
-  margin-top: 2em;
+.mb-\[8em\] {
+  margin-bottom: 8em;
+}
+
+.mt-\[2\.5em\] {
+  margin-top: 2.5em;
+}
+
+.mt-\[8em\] {
+  margin-top: 8em;
+}
+
+.mb-\[4em\] {
+  margin-bottom: 4em;
 }
 
 .box-border {
@@ -954,6 +970,10 @@ video {
   height: 20%;
 }
 
+.h-\[300px\] {
+  height: 300px;
+}
+
 .h-\[50\%\] {
   height: 50%;
 }
@@ -986,8 +1006,8 @@ video {
   height: 100vh;
 }
 
-.h-\[300px\] {
-  height: 300px;
+.min-h-\[30vh\] {
+  min-height: 30vh;
 }
 
 .min-h-\[80\%\] {
@@ -998,16 +1018,16 @@ video {
   min-height: 100vh;
 }
 
-.min-h-\[30vh\] {
-  min-height: 30vh;
-}
-
 .w-0 {
   width: 0px;
 }
 
 .w-\[18px\] {
   width: 18px;
+}
+
+.w-\[300px\] {
+  width: 300px;
 }
 
 .w-\[80\%\] {
@@ -1052,12 +1072,8 @@ video {
   width: max-content;
 }
 
-.w-\[300px\] {
-  width: 300px;
-}
-
-.min-w-\[\] {
-  min-width: ;
+.w-\[15px\] {
+  width: 15px;
 }
 
 .flex-shrink {
@@ -1110,6 +1126,11 @@ video {
 }
 
 .rotate-45 {
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-\[45deg\] {
   --tw-rotate: 45deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -2040,6 +2061,10 @@ video {
   border-width: 1px;
 }
 
+.border-\[1px\] {
+  border-width: 1px;
+}
+
 .border-x {
   border-left-width: 1px;
   border-right-width: 1px;
@@ -2110,6 +2135,15 @@ video {
   border-style: none;
 }
 
+.border-dark2 {
+  --tw-border-opacity: 1;
+  border-color: rgb(72 73 74 / var(--tw-border-opacity));
+}
+
+.bg-\[\#2626276a\] {
+  background-color: #2626276a;
+}
+
 .bg-\[\#FFFFFFBF\] {
   background-color: #FFFFFFBF;
 }
@@ -2142,10 +2176,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#2626276a\] {
-  background-color: #2626276a;
 }
 
 .decoration-slice {
@@ -2566,6 +2596,10 @@ video {
   line-height: 1rem;
 }
 
+.leading-20\.15 {
+  line-height: 20.15px;
+}
+
 .text-\[\#336699\]\/\[\.35\] {
   color: rgb(51 102 153 / .35);
 }
@@ -2907,6 +2941,10 @@ video {
   transition-duration: 150ms;
 }
 
+.duration-100 {
+  transition-duration: 100ms;
+}
+
 .duration-200 {
   transition-duration: 200ms;
 }
@@ -2933,10 +2971,6 @@ video {
 
 .duration-\[1s\] {
   transition-duration: 1s;
-}
-
-.duration-100 {
-  transition-duration: 100ms;
 }
 
 .ease-in {
@@ -3565,21 +3599,6 @@ ul,li,p,h1,h2,h3,h4,h5,h6{
   background: url('../images/bgContact.png');
   background-repeat: repeat;
 }
-
-/* footer .Map-Container::before
- {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 4;
-  background: #000000eb;
-  opacity: .7;
-  pointer-events: none;
-
-  } */
 
 .Error-C .bgContact::before{
   content: '';
@@ -4543,9 +4562,18 @@ footer .Details .Row.phone .Answer span:not(:last-child)::before{
   cursor: pointer;
 }
 
+.hover\:border-\[transparent\]:hover {
+  border-color: transparent;
+}
+
 .hover\:bg-dark:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(38 38 39 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-main:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(143 153 60 / var(--tw-bg-opacity));
 }
 
 .hover\:font-bold:hover {
@@ -4575,6 +4603,10 @@ footer .Details .Row.phone .Answer span:not(:last-child)::before{
   text-align: center;
 }
 
+.group\/btn:hover .group-hover\/btn\:flex {
+  display: flex;
+}
+
 .group:hover .group-hover\:translate-x-\[-1em\] {
   --tw-translate-x: -1em;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -4585,9 +4617,18 @@ footer .Details .Row.phone .Answer span:not(:last-child)::before{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.group\/btn:hover .group-hover\/btn\:text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .group:hover .group-hover\:grayscale-\[0\] {
   --tw-grayscale: grayscale(0);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.group\/btn.active .group-\[\&\.active\]\/btn\:flex {
+  display: flex;
 }
 
 .group.dark .group-\[\&\.dark\]\:bg-dark2 {
@@ -4598,6 +4639,11 @@ footer .Details .Row.phone .Answer span:not(:last-child)::before{
 .group.dark .group-\[\&\.dark\]\:text-dark2 {
   --tw-text-opacity: 1;
   color: rgb(72 73 74 / var(--tw-text-opacity));
+}
+
+.group\/btn.active .group-\[\&\.active\]\/btn\:text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .group.darkLogo .group-\[\&\.darkLogo\]\:opacity-0 {
@@ -4630,6 +4676,15 @@ footer .Details .Row.phone .Answer span:not(:last-child)::before{
 
 .\[\&\.Open\]\:w-\[100vw\].Open {
   width: 100vw;
+}
+
+.\[\&\.active\]\:border-\[transparent\].active {
+  border-color: transparent;
+}
+
+.\[\&\.active\]\:bg-main.active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(143 153 60 / var(--tw-bg-opacity));
 }
 
 .\[\&\.hide\]\:before\:opacity-\[1\].hide::before {
