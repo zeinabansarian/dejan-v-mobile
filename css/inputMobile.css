@@ -540,8 +540,12 @@ order: 2;
   line-height: 21px;
   font-family:'Ravi400';
   outline: none;
+  border-bottom:  1px solid #262627 !important;
 }
-header.dark .searchs.OpenS svg path{
+header .searchs svg path{
+  stroke: #262627;
+  }
+/* header.dark .searchs.OpenS svg path{
 stroke: #262627;
 }
 header .searchs.OpenS svg path{
@@ -559,7 +563,7 @@ header .header-inner .InputBox input[type="text"]{
 header .header-inner .InputBox input[type="text"]::placeholder{
  
 color: white !important;
-}
+} */
 .header-inner .InputBox input[type="text"]:focus-visible,
 .header-inner .InputBox input[type="text"]:focus,
 .header-inner .InputBox input[type="text"]:active{
@@ -1223,3 +1227,4 @@ footer .Details .Row.phone .Answer p:not(:last-child)::before{
     background-color: white;
     content: '';
     }
+ 

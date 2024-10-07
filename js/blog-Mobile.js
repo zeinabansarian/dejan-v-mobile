@@ -10,7 +10,20 @@ header.classList.add('darkLogo')
     lenis.raf(time)
     requestAnimationFrame(raf)
   }
+  lenis.on('scroll',(e)=>{
+    if(e.scroll > 0){
+      header.classList.add('Gobottom')
+      header.classList.remove('dark')
+      header.classList.remove('darkLogo')
   
+    }
+    else{
+      header.classList.remove('Gobottom')
+      header.classList.add('dark')
+  header.classList.add('darkLogo')
+    }
+    
+    })
   requestAnimationFrame(raf)
   gsap.to('.Blog',{
     opacity:1,

@@ -21,38 +21,42 @@ CLbtn.addEventListener('click',()=>{
    
 })
 let searchIcon = document.querySelector('header .searchIconHeader')
-let closeSearch = document.querySelector('header .CloseSearch')
+let closeSearch = document.querySelector('header .searchs .CloseSearch')
 let Searchs = document.querySelector('header .searchs')
 let input = document.querySelector('.InputBox')
+let searchIcon2 = document.querySelector('header .searchIconHeader2')
+searchIcon2.addEventListener('click',()=>{
+  if(searchIcon.classList.contains('OpenS')){
+      let inputt = document.querySelector('header input#search')
+      console.log('val',inputt.value);
+      if(inputt.value == ''){
+          return
+           }
+         else{
+             console.log('val',input.value);
+             setTimeout(()=>{
+            window.location.href = `/search.bc?q=${inputt.value}`
+             },1000)}
+  }
+  else{
+      let inputt = document.querySelector('header input#search')
+      console.log('val',inputt.value);
+      if(inputt.value == ''){
+          return
+           }
+         else{
+             console.log('val',inputt.value);
+             setTimeout(()=>{
+            window.location.href = `/search.bc?q=${inputt.value}`
+             },1000)}
+  }
+})
 searchIcon.addEventListener('click',()=>{
     input.classList.add('OpenS')
     searchIcon.classList.add('OpenS')
     Searchs.classList.add('OpenS')
 
-    if(searchIcon.classList.contains('OpenS')){
-        let inputt = document.querySelector('header input#search')
-        console.log('val',inputt.value);
-        if(inputt.value == ''){
-            return
-             }
-           else{
-               console.log('val',input.value);
-               setTimeout(()=>{
-              window.location.href = `/search.bc?q=${inputt.value}`
-               },1000)}
-    }
-    else{
-        let inputt = document.querySelector('header input#search')
-        console.log('val',inputt.value);
-        if(inputt.value == ''){
-            return
-             }
-           else{
-               console.log('val',inputt.value);
-               setTimeout(()=>{
-              window.location.href = `/search.bc?q=${inputt.value}`
-               },1000)}
-    }
+
 })
 let inputt = document.querySelector('header input#search')
 inputt.addEventListener("keypress", function(event) {
@@ -74,9 +78,11 @@ inputt.addEventListener("keypress", function(event) {
     }
   });
 closeSearch.addEventListener('click',()=>{
-    input.classList.toggle('OpenS')
-    searchIcon.classList.toggle('OpenS')
-    Searchs.classList.toggle('OpenS')
+  console.log('click');
+  
+    input.classList.remove('OpenS')
+    searchIcon.classList.remove('OpenS')
+    Searchs.classList.remove('OpenS')
 })
 
 const host = {
