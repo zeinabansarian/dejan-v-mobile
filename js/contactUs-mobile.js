@@ -6,6 +6,9 @@ let slide2 = document.querySelector(".slide-2");
 let inner1 = document.querySelector(".inner1");
 let gsapFlag = 0;
 let countFlag = true;
+let openFom= document.querySelector(".openFom")
+let formPopUp= document.querySelector(".formPopUp")
+let closePopForm= document.querySelector(".closePopForm")
 let darkFlag=true;
 let darkSections = document.querySelectorAll(".darkSection");
 let scrollContainer = document.querySelector(".scrollContainer")
@@ -180,3 +183,27 @@ scrollContainer.addEventListener('swiped', function(e) {
       }, 200);
     }
   });
+
+
+  let closeM = document.querySelector('.MapPOP .Closemap')
+let mapBTN = document.querySelector(' .Pointer ')
+let mapPop = document.querySelector('.MapPOP')
+mapBTN.addEventListener('click',()=>{
+  mapPop.classList.toggle('open')
+})
+closeM.addEventListener('click',()=>{
+  mapPop.classList.toggle('open')
+})
+
+
+
+
+
+
+openFom.addEventListener("click" ,function (params) {
+    formPopUp.classList.add("activePop")
+  })
+
+  closePopForm.addEventListener("click" ,function (params) {
+    formPopUp.classList.remove("activePop")
+  })
