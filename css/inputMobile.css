@@ -1250,3 +1250,105 @@ footer .Details .Row.phone .Answer:not(:last-child)::before{
   .Search-Container .Search-C {
     min-height: 100vh;
   }
+
+
+
+  .formPopUp .innerForm {
+    overflow-y: auto;
+  }
+  .formPopUp .homeForm1 [data-bc-title-container],
+  .formPopUp .homeForm1 legend {
+    display: none;
+  }
+  .formPopUp .homeForm1 [data-bc-answer-container] {
+    width: 100%;
+  }
+  .formPopUp .homeForm1 [data-bc-part-container],
+  .formPopUp .homeForm1 [data-bc-btn-container] {
+    width: 100%;
+  }
+  .formPopUp .homeForm1 [data-bc-part-related-cell] {
+    margin: 0;
+  }
+  .formPopUp .homeForm1 [data-bc-schema-column] {
+    display: flex;
+    justify-content: space-between;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    align-items: center;
+  }
+  .formPopUp .homeForm1 [data-bc-schema-column] [data-bc-question] {
+    width: 100%;
+  }
+  .formPopUp .homeForm1 .captcha-sefaresh {
+    border-radius: 3px;
+  }
+  .formPopUp .homeForm1 .refressh.refressh1 {
+    width: 26px;
+    cursor: pointer;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .formPopUp .homeForm1 input,
+  .formPopUp .homeForm1 select,
+  .formPopUp .homeForm1 textarea {
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid #636466 !important;
+    border-radius: 0 !important;
+    font-family: "Ravi400" !important;
+    font-size: 13px !important;
+    line-height: 21px !important;
+    text-align: justify;
+    color: white !important;
+    direction: rtl;
+  }
+  .formPopUp .homeForm1 input[type=file] {
+    border: none;
+    opacity: 0;
+    overflow: hidden;
+    left: 0;
+    position: absolute;
+  }
+  .formPopUp .homeForm1 select {
+    background: #262627 !important;
+    border: none !important;
+    border-bottom: 1px solid #636466 !important;
+    border-radius: 0 !important;
+    font-family: "Ravi400" !important;
+    font-size: 13px !important;
+    line-height: 21px !important;
+    text-align: justify;
+    color: white !important;
+    direction: rtl;
+  }
+  .formPopUp .homeForm1 ::-moz-placeholder {
+    font-family: "Ravi400" !important;
+    font-size: 13px !important;
+    line-height: 21px;
+    text-align: justify;
+    color: white !important;
+  }
+  .formPopUp .homeForm1 ::placeholder {
+    font-family: "Ravi400" !important;
+    font-size: 13px !important;
+    line-height: 21px;
+    text-align: justify;
+    color: white !important;
+  }
+  .formPopUp .homeForm1 .captchaContainerclass {
+    display: flex;
+    width: 100%;
+    direction: ltr;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .formPopUp .homeForm1 .responsMsg1 {
+    font-family: "Ravi400";
+    color: white;
+    display: none;
+    margin-bottom: 10px;
+  }
+  .formPopUp .homeForm1 fieldset:nth-child(3) [data-bc-question]:last-child {
+    width: 130px;
+  }

@@ -36,13 +36,13 @@ const mainSwiper = new Swiper(".mainSwiper", {
      
 
         if (this.activeIndex == 0) {
-        //   let newH=document.querySelector("header");
-        //   newH.classList.remove("dark");
-        //   newH.classList.remove("darkLogo");
+          let newH=document.querySelector("header");
+          newH.classList.remove("dark");
+          newH.classList.remove("darkLogo");
         } else {
-        //   let newH=document.querySelector("header");
-        //   newH.classList.add("dark");
-        //   newH.classList.add("darkLogo");
+          let newH=document.querySelector("header");
+          newH.classList.add("dark");
+          newH.classList.add("darkLogo");
 
 
         mainSwiper.allowTouchMove=false
@@ -63,24 +63,24 @@ const mainSwiper = new Swiper(".mainSwiper", {
                 scrub: true,
                 // markers: true,
                 onEnter: () => {
-                //   let newH=document.querySelector("header");
-                //   newH.classList.remove("dark");
-                //   newH.classList.remove("darkLogo");
+                  let newH=document.querySelector("header");
+                  newH.classList.remove("dark");
+                  newH.classList.remove("darkLogo");
                 },
                 onLeave: () => {
-                //   let newH=document.querySelector("header");
-                //   newH.classList.add("dark");
-                //   newH.classList.add("darkLogo");
+                  let newH=document.querySelector("header");
+                  newH.classList.add("dark");
+                  newH.classList.add("darkLogo");
                 },
                 onEnterBack: () => {
-                //   let newH=document.querySelector("header");
-                //   newH.classList.remove("dark");
-                //   newH.classList.remove("darkLogo");
+                  let newH=document.querySelector("header");
+                  newH.classList.remove("dark");
+                  newH.classList.remove("darkLogo");
                 },
                 onLeaveBack: () => {
-                //   let newH=document.querySelector("header");
-                //   newH.classList.add("dark");
-                //   newH.classList.add("darkLogo");
+                  let newH=document.querySelector("header");
+                  newH.classList.add("dark");
+                  newH.classList.add("darkLogo");
                 },
               },
             });
@@ -185,14 +185,14 @@ scrollContainer.addEventListener('swiped', function(e) {
   });
 
 
-  let closeM = document.querySelector('.MapPOP .Closemap')
-let mapBTN = document.querySelector(' .Pointer ')
-let mapPop = document.querySelector('.MapPOP')
-mapBTN.addEventListener('click',()=>{
-  mapPop.classList.toggle('open')
+  let closeM2 = document.querySelector('.MapPOP .Closemap')
+let mapBTN2 = document.querySelector(' .Pointer ')
+let mapPop2 = document.querySelector('.MapPOP')
+mapBTN2.addEventListener('click',()=>{
+  mapPop2.classList.toggle('open')
 })
-closeM.addEventListener('click',()=>{
-  mapPop.classList.toggle('open')
+closeM2.addEventListener('click',()=>{
+  mapPop2.classList.toggle('open')
 })
 
 
