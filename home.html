@@ -40,7 +40,8 @@
                     
             </div>
         </div>
-        <header class="MobileHeader group z-[99999] w-full fixed left-0 top-0 flex justify-center items-center py-[1em]">
+        <header class="MobileHeader group z-[99999] w-full fixed [&.Gobottom]:bg-[#90993c72]
+        left-0 top-0 flex justify-center items-center py-[1em]">
             <div class="header-inner w-[90%] mx-auto grid grid-cols-[1fr,1fr]">
                 <div class="Right w-full flex justify-start items-center">
                     <div class="Items w-full flex justify-start items-center gap-[2.8em]">
@@ -57,7 +58,7 @@
                                 پروژه‌ها
                             </a>
                         </span>
-                        <span class="Item w-auto flex searchs justify-center items-center">
+                        <span class="Item w-auto flex justify-center items-center">
                            
                             <div class="searchIconHeader duration-200  hover:cursor-pointer w-auto flex justify-start items-center">
                                 <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -65,18 +66,25 @@
                                     </svg>
                                     
                             </div>
-                            <div class="InputBox flex [&.OpenS]:w-[300px] justify-center gap-[0.5em] opacity-0 duration-200 w-0 [&.OpenS]:opacity-[1]">
-                                <input type="text" class="w-[80%]
-                                InputBox bg-transparent " placeholder="عبارت مورد نظر را جست و جو کنید" id="search">
-                                <div class="CloseSearch hover:cursor-pointer flex justify-center items-center">
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 1L13 13M1 13L13 1" stroke="#262627" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                        
-                                </div>
-                            </div>
+                        
                           
                         </span>
+                        <div class="InputBox searchs flex [&.OpenS]:scale-[1] right-0 w-[80%] mx-auto fixed z-[999] top-[15vh] left-0
+                        justify-center gap-[0.5em] opacity-0 duration-200 scale-0 [&.OpenS]:opacity-[1]">
+                        <div class="searchIconHeader2 duration-200  hover:cursor-pointer w-auto flex justify-start items-center">
+                           <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                               <path d="M16 15L11.3333 10.3333M2 6.44444C2 7.15942 2.14082 7.86739 2.41443 8.52794C2.68804 9.18849 3.08908 9.78868 3.59464 10.2942C4.1002 10.7998 4.7004 11.2008 5.36095 11.4745C6.0215 11.7481 6.72947 11.8889 7.44444 11.8889C8.15942 11.8889 8.86739 11.7481 9.52794 11.4745C10.1885 11.2008 10.7887 10.7998 11.2942 10.2942C11.7998 9.78868 12.2008 9.18849 12.4745 8.52794C12.7481 7.86739 12.8889 7.15942 12.8889 6.44444C12.8889 5.72947 12.7481 5.0215 12.4745 4.36095C12.2008 3.7004 11.7998 3.1002 11.2942 2.59464C10.7887 2.08908 10.1885 1.68804 9.52794 1.41443C8.86739 1.14082 8.15942 1 7.44444 1C6.72947 1 6.0215 1.14082 5.36095 1.41443C4.7004 1.68804 4.1002 2.08908 3.59464 2.59464C3.08908 3.1002 2.68804 3.7004 2.41443 4.36095C2.14082 5.0215 2 5.72947 2 6.44444Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                               </svg>
+                               
+                           </div>
+                           <input type="text" class="w-[80%] InputBox bg-transparent" placeholder="عبارت مورد نظر را جست و جو کنید" id="search">
+                           <div class="CloseSearch hover:cursor-pointer flex justify-center items-center">
+                               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                   <path d="M1 1L13 13M1 13L13 1" stroke="#262627" stroke-linecap="round" stroke-linejoin="round"/>
+                                   </svg>
+                                   
+                           </div>
+                       </div>
                         <span class="Item w-auto flex justify-center group-[&.dark]:text-dark2
                          items-center font-EncodeSans500 font-medium leading-18.75
                         text-white">

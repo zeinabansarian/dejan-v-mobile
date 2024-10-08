@@ -1,0 +1,456 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" catid="210325">
+    <member name="slider" type="list"/> 
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="19" usedforid="2362522"> 
+   <member name="video" type="list" format="3"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2362310"> 
+   <member name="def-about" type="view"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2362310"> 
+   <member name="def-about1" type="view" postsql="select * from [db.def-about1] where TypeID=250"/> 
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2362310"> 
+   <member name="def-gallery" type="list" format="4"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" catid="210326">
+     <member name="mdef-project" type="list" size="360x580"/>
+</basis>	
+
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="19" > 
+   <member request="cat" type="tree" name="descr-prj" parentid="210326" /> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="210328"> 
+    <member name="mdef-blog" type="list" size="300x300"/> 
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" >
+     <member request="cat" type="tree" name="descr-blog" parentid="210328" /> 
+    </basis>	
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فهندژ</title>
+   <meta name="description" content="فهندژ">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputMobile.css">
+</head>
+<body>
+    <main class="Home-mobile flex flex-col overflow-hidden" dir="rtl">
+        <div class="Loading-Container w-full h-screen fixed top-0 left-0
+         z-[999999] bg-white flex justify-center items-center">
+            <div class="logo">
+                <svg width="120" height="83" viewBox="0 0 120 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="path" d="M82.2156 0.333804L77.9383 4.60489C77.4926 5.04996 77.4926 5.77156 77.9383 6.21663L82.2156 10.4877C82.6613 10.9328 83.3839 10.9328 83.8296 10.4877L88.1069 6.21663C88.5527 5.77156 88.5527 5.04996 88.1069 4.60489L83.8297 0.333798C83.3839 -0.11127 82.6613 -0.111264 82.2156 0.333804Z" fill="#8F993E"/>
+                    <path class="path" d="M74.9905 7.57419L70.7132 11.8453C70.2675 12.2904 70.2675 13.0119 70.7132 13.457L74.9905 17.7281C75.4362 18.1732 76.1589 18.1732 76.6046 17.7281L80.8819 13.457C81.3276 13.0119 81.3276 12.2903 80.8819 11.8453L76.6046 7.57419C76.1589 7.12912 75.4362 7.12912 74.9905 7.57419Z" fill="#8F993E"/>
+                    <path class="path" d="M67.7609 14.7927L63.4836 19.0638C63.0379 19.5088 63.0379 20.2304 63.4836 20.6755L67.7609 24.9466C68.2066 25.3917 68.9292 25.3917 69.375 24.9466L73.6523 20.6755C74.098 20.2304 74.098 19.5088 73.6523 19.0638L69.375 14.7927C68.9292 14.3476 68.2066 14.3476 67.7609 14.7927Z" fill="#8F993E"/>
+                    <path class="path" d="M119.977 75.9357C119.946 74.2061 119.305 73.2977 117.59 73.1603C115.767 73.0128 113.924 73.1133 112.058 73.1234C111.976 73.1234 111.897 73.1559 111.839 73.2137C111.781 73.2716 111.749 73.35 111.749 73.4318V82.3916C111.749 82.4737 111.781 82.5525 111.839 82.6108C111.897 82.6692 111.976 82.7024 112.058 82.7033H115.277C115.359 82.7024 115.438 82.6692 115.496 82.6108C115.553 82.5525 115.586 82.4737 115.586 82.3916V80.3435C115.587 80.2685 115.615 80.1964 115.665 80.1404C115.715 80.0844 115.783 80.0482 115.858 80.0385C115.962 80.0385 116.032 80.015 116.106 80.0117C119.527 79.8709 120.034 79.3379 119.977 75.9357ZM115.727 77.3033H115.304V75.5067C115.573 75.4865 115.843 75.4865 116.113 75.5067C116.556 75.5435 116.724 75.7782 116.73 76.2273C116.747 77.1257 116.613 77.2664 115.727 77.3033Z" fill="#48494A"/>
+                    <path class="path" d="M118.886 31.5356H95.8577C95.2422 31.5356 94.7432 32.0338 94.7432 32.6485V68.253C94.7432 68.8676 95.2422 69.3659 95.8577 69.3659H118.886C119.501 69.3659 120 68.8676 120 68.253V32.6485C120 32.0338 119.501 31.5356 118.886 31.5356Z" fill="#48494A"/>
+                    <path class="path" d="M100.034 0.352294L95.5086 5.04504C95.3064 5.25528 95.1949 5.53634 95.198 5.8278C95.2012 6.11926 95.3187 6.39785 95.5253 6.6037L118.097 29.1624C118.252 29.3182 118.451 29.4244 118.667 29.4675C118.883 29.5107 119.107 29.489 119.311 29.405C119.514 29.3211 119.689 29.1787 119.811 28.9959C119.934 28.8131 120 28.5981 120 28.3781V18.9926C119.999 18.8456 119.969 18.7003 119.911 18.5651C119.854 18.4298 119.77 18.3074 119.664 18.2048L101.611 0.335534C101.507 0.233046 101.383 0.15217 101.247 0.0975341C101.111 0.0428985 100.965 0.015577 100.819 0.0171338C100.672 0.0186905 100.528 0.049095 100.393 0.106606C100.258 0.164118 100.136 0.247607 100.034 0.352294Z" fill="#48494A"/>
+                    <path class="path" d="M64.2867 69.3625H87.3145C87.461 69.3629 87.6061 69.3345 87.7415 69.2787C87.877 69.2229 88 69.141 88.1036 69.0375C88.2071 68.9341 88.2892 68.8113 88.3451 68.676C88.4009 68.5408 88.4294 68.3959 88.429 68.2497V15.2886C88.4287 15.069 88.3632 14.8544 88.241 14.6718C88.1187 14.4892 87.945 14.3468 87.7419 14.2626C87.5387 14.1784 87.3152 14.156 87.0993 14.1985C86.8835 14.2409 86.6851 14.3461 86.529 14.5009L63.5012 37.4954C63.2895 37.7034 63.1688 37.9866 63.1655 38.2831V68.2329C63.1628 68.3811 63.1899 68.5284 63.2451 68.666C63.3004 68.8036 63.3827 68.9288 63.4872 69.0341C63.5918 69.1394 63.7163 69.2227 63.8537 69.2791C63.991 69.3355 64.1382 69.3639 64.2867 69.3625Z" fill="#8F983D"/>
+                    <path class="path" d="M14.5653 1.9076L18.1907 5.52772C18.3985 5.73735 18.5151 6.02043 18.5151 6.31544C18.5151 6.61044 18.3985 6.89352 18.1907 7.10315L13.4508 11.8328C13.3476 11.9362 13.2249 12.0183 13.0898 12.0744C12.9547 12.1304 12.8099 12.1592 12.6636 12.1592C12.5174 12.1592 12.3725 12.1304 12.2375 12.0744C12.1024 12.0183 11.9797 11.9362 11.8765 11.8328L7.13662 7.10315C7.03289 6.99978 6.9506 6.877 6.89445 6.74183C6.8383 6.60667 6.80939 6.46177 6.80939 6.31544C6.80939 6.1691 6.8383 6.0242 6.89445 5.88904C6.9506 5.75387 7.03289 5.63109 7.13662 5.52772L10.762 1.9076C10.9205 1.75233 11.029 1.55332 11.0735 1.33608C11.1179 1.11884 11.0964 0.893289 11.0117 0.688349C10.9269 0.483408 10.7827 0.308424 10.5977 0.18584C10.4127 0.0632553 10.1952 -0.00134031 9.97314 0.000337626H1.14804C1.00083 0.000331625 0.855083 0.0294462 0.719209 0.086C0.583335 0.142554 0.460027 0.225426 0.356407 0.329832C0.252786 0.434237 0.170906 0.558106 0.115494 0.694287C0.0600829 0.830467 0.0322383 0.976259 0.0335685 1.12325V68.2497C0.0335685 68.5448 0.150985 68.8279 0.359989 69.0366C0.463476 69.1399 0.586335 69.2219 0.721548 69.2778C0.856761 69.3337 1.00168 69.3625 1.14804 69.3625H24.1692C24.3157 69.3629 24.4608 69.3345 24.5962 69.2787C24.7316 69.2229 24.8546 69.141 24.9582 69.0375C25.0618 68.9341 25.1439 68.8113 25.1997 68.676C25.2556 68.5408 25.2841 68.3959 25.2836 68.2497V1.12325C25.285 0.976259 25.2571 0.830467 25.2017 0.694287C25.1463 0.558106 25.0644 0.434237 24.9608 0.329832C24.8572 0.225426 24.7339 0.142554 24.598 0.086C24.4621 0.0294462 24.3164 0.000331625 24.1692 0.000337626H15.3508C15.1283 -0.00233939 14.9101 0.061755 14.7245 0.18432C14.5389 0.306884 14.3944 0.482272 14.3098 0.687769C14.2252 0.893265 14.2043 1.1194 14.2498 1.33689C14.2954 1.55438 14.4053 1.7532 14.5653 1.9076Z" fill="#48494A"/>
+                    <path class="path" d="M55.7469 0.0103935H32.719C32.1035 0.0103935 31.6046 0.508634 31.6046 1.12325V68.2497C31.6046 68.8643 32.1035 69.3625 32.719 69.3625H55.7469C56.3624 69.3625 56.8614 68.8643 56.8614 68.2497V1.12325C56.8614 0.508634 56.3624 0.0103935 55.7469 0.0103935Z" fill="#48494A"/>
+                    <path class="path" d="M48.2712 73.0731H52.7022C52.7948 73.0734 52.8839 73.1078 52.9527 73.1696C53.0214 73.2315 53.0649 73.3165 53.0749 73.4083L53.7764 79.7435H54.1121L53.8234 73.5022C53.8212 73.4513 53.8292 73.4005 53.847 73.3529C53.8649 73.3052 53.8922 73.2616 53.9273 73.2246C53.9623 73.1877 54.0045 73.1582 54.0513 73.138C54.098 73.1177 54.1484 73.1071 54.1994 73.1067H56.4686C56.5689 73.1075 56.6649 73.1477 56.7359 73.2186C56.8068 73.2894 56.8471 73.3852 56.8479 73.4854V82.3346C56.8471 82.4348 56.8068 82.5306 56.7359 82.6015C56.6649 82.6723 56.5689 82.7125 56.4686 82.7134H52.0074C51.9145 82.7132 51.8249 82.6789 51.7556 82.6171C51.6863 82.5554 51.6421 82.4703 51.6314 82.3782L50.903 76.0899H50.5874L50.6881 82.3245C50.6886 82.3746 50.6791 82.4242 50.6602 82.4705C50.6414 82.5169 50.6135 82.559 50.5782 82.5945C50.543 82.6301 50.501 82.6583 50.4548 82.6775C50.4085 82.6968 50.3589 82.7067 50.3088 82.7067H48.2712C48.1712 82.7058 48.0756 82.6655 48.0052 82.5946C47.9348 82.5236 47.8953 82.4278 47.8953 82.3279V73.4553C47.8944 73.4054 47.9034 73.3559 47.9219 73.3095C47.9404 73.2632 47.968 73.221 48.003 73.1854C48.038 73.1499 48.0797 73.1216 48.1258 73.1023C48.1718 73.083 48.2213 73.0731 48.2712 73.0731Z" fill="#48494A"/>
+                    <path class="path" d="M95.757 77.9636C95.757 78.8352 95.7771 79.7033 95.757 80.5748C95.7268 81.691 95.2669 82.3313 94.1994 82.6329C92.5362 83.1224 90.7669 83.1224 89.1037 82.6329C88.1739 82.3581 87.5999 81.7413 87.5931 80.7391C87.5764 78.9055 87.5394 77.0519 87.5931 75.2385C87.6234 74.0687 88.1302 73.3379 89.2716 73.2273C90.8715 73.0547 92.4854 73.0547 94.0853 73.2273C95.2568 73.3547 95.72 74.1592 95.7637 75.3625C95.7637 75.4262 95.7637 75.4899 95.7637 75.5502V77.9771L95.757 77.9636ZM91.3494 80.3871H91.947C92.0119 80.3871 92.0743 80.3613 92.1202 80.3154C92.1662 80.2695 92.192 80.2073 92.192 80.1424V75.7078C92.192 75.6426 92.1663 75.58 92.1204 75.5336C92.0746 75.4871 92.0123 75.4606 91.947 75.4597H91.3494C91.2845 75.4597 91.2221 75.4855 91.1762 75.5314C91.1302 75.5773 91.1044 75.6395 91.1044 75.7044V80.1424C91.1044 80.2073 91.1302 80.2695 91.1762 80.3154C91.2221 80.3613 91.2845 80.3871 91.3494 80.3871Z" fill="#48494A"/>
+                    <path class="path" d="M83.4911 82.3178C83.1353 80.9771 84.0181 79.3748 82.6519 78.3726C82.6156 78.3411 82.5865 78.3022 82.5666 78.2586C82.5466 78.2149 82.5363 78.1675 82.5363 78.1195C82.5363 78.0715 82.5466 78.0241 82.5666 77.9804C82.5865 77.9368 82.6156 77.8979 82.6519 77.8664C83.3971 77.3167 83.4105 77.062 83.4005 75.3826C83.4005 73.8876 82.9876 73.2541 81.4871 73.1536C79.5368 73.0195 77.573 73.1067 75.5958 73.1167C75.5121 73.1167 75.4319 73.1499 75.3727 73.209C75.3135 73.2681 75.2803 73.3482 75.2803 73.4318V82.3882C75.2775 82.4315 75.2837 82.475 75.2986 82.5158C75.3134 82.5566 75.3365 82.5939 75.3664 82.6254C75.3964 82.6569 75.4325 82.6818 75.4725 82.6987C75.5126 82.7156 75.5557 82.724 75.5992 82.7234H78.6506C78.6937 82.7235 78.7365 82.7148 78.7761 82.6977C78.8158 82.6806 78.8515 82.6556 78.8811 82.6242C78.9107 82.5927 78.9335 82.5556 78.9481 82.515C78.9627 82.4744 78.9688 82.4313 78.9661 82.3882V79.6061C78.966 79.52 78.999 79.4372 79.0584 79.3748C79.1178 79.3124 79.1989 79.2752 79.285 79.2709C79.3705 79.276 79.4508 79.3136 79.5094 79.3759C79.5681 79.4382 79.6007 79.5206 79.6005 79.6061V82.3882C79.6004 82.4738 79.633 82.5561 79.6916 82.6184C79.7503 82.6807 79.8306 82.7183 79.9161 82.7234H83.1655C83.2166 82.7273 83.2679 82.7186 83.3149 82.6982C83.3619 82.6778 83.4033 82.6462 83.4353 82.6063C83.4674 82.5664 83.4892 82.5192 83.4989 82.469C83.5087 82.4187 83.506 82.3668 83.4911 82.3178ZM79.1272 76.6933H78.9191V74.8798C79.1178 74.8596 79.318 74.8596 79.5166 74.8798C79.9631 74.9167 80.1343 75.1547 80.141 75.6072C80.1544 76.5189 80.0201 76.6564 79.1239 76.6933H79.1272Z" fill="#48494A"/>
+                    <path class="path" d="M25.5159 73.1629L24.6424 74.0351C24.5952 74.0822 24.5952 74.1586 24.6424 74.2057L25.5159 75.078C25.5631 75.1251 25.6396 75.1251 25.6868 75.078L26.5603 74.2058C26.6075 74.1586 26.6075 74.0822 26.5603 74.0351L25.6868 73.1629C25.6396 73.1157 25.5631 73.1157 25.5159 73.1629Z" fill="#99A14E"/>
+                    <path class="path" d="M26.8375 71.8453L25.964 72.7175C25.9168 72.7646 25.9168 72.841 25.964 72.8882L26.8375 73.7604C26.8847 73.8075 26.9612 73.8075 27.0084 73.7604L27.8819 72.8882C27.9291 72.841 27.9291 72.7646 27.8819 72.7175L27.0084 71.8453C26.9612 71.7981 26.8847 71.7981 26.8375 71.8453Z" fill="#99A14E"/>
+                    <path class="path" d="M28.1165 70.564L27.243 71.4363C27.1958 71.4834 27.1958 71.5598 27.243 71.6069L28.1165 72.4792C28.1637 72.5263 28.2402 72.5263 28.2874 72.4792L29.1609 71.6069C29.2081 71.5598 29.2081 71.4834 29.1609 71.4363L28.2874 70.564C28.2402 70.5169 28.1637 70.5169 28.1165 70.564Z" fill="#99A14E"/>
+                    <path class="path" d="M28.8922 73.1301L25.0487 76.9715C25.0183 77.003 25.0014 77.0451 25.0017 77.0888C25.0017 77.4944 25.0017 79.6731 25.0017 80.4407C25.0073 80.615 24.9506 80.7856 24.8417 80.922C24.7329 81.0583 24.5789 81.1515 24.4075 81.1849C24.2653 81.2209 24.1165 81.2234 23.9732 81.1919C23.8298 81.1605 23.6958 81.0961 23.5817 81.0039C23.5817 81.0039 23.5817 82.0363 23.5817 82.5022C23.5817 82.56 23.6047 82.6154 23.6456 82.6563C23.6866 82.6971 23.7421 82.7201 23.7999 82.7201H29.0332C29.0911 82.7201 29.1466 82.6971 29.1875 82.6563C29.2284 82.6154 29.2514 82.56 29.2514 82.5022V73.2877C29.2486 73.2474 29.2348 73.2087 29.2116 73.1757C29.1883 73.1427 29.1565 73.1167 29.1195 73.1005C29.0825 73.0843 29.0418 73.0785 29.0017 73.0837C28.9617 73.0889 28.9238 73.105 28.8922 73.1301Z" fill="#929B3D"/>
+                    <path class="path" d="M8.1101 75.9759C8.1101 74.0486 7.41188 73.2441 5.42464 73.1469C3.76972 73.0631 2.11145 73.1167 0.389393 73.1268C0.284603 73.1311 0.185552 73.1757 0.112972 73.2513C0.0403925 73.3269 -8.94304e-05 73.4276 1.48349e-07 73.5323V82.2475C1.48349e-07 82.355 0.0427936 82.4582 0.118967 82.5342C0.195139 82.6103 0.298452 82.653 0.406177 82.653C2.31286 82.653 4.16247 82.757 5.99194 82.6162C7.5193 82.5022 8.09332 81.6776 8.10675 80.1659C8.11682 78.7715 8.11346 77.3771 8.1101 75.9759ZM4.80698 78.5201C4.80698 78.9324 4.64585 79.1536 4.23296 79.1905C3.97037 79.2099 3.7067 79.2099 3.44411 79.1905C3.40431 79.1896 3.36639 79.1734 3.33824 79.1453C3.3101 79.1172 3.29391 79.0794 3.29305 79.0396V76.7603C3.29391 76.7206 3.3101 76.6827 3.33824 76.6546C3.36639 76.6265 3.40431 76.6103 3.44411 76.6095C3.65656 76.5981 3.86946 76.5981 4.08191 76.6095C4.61564 76.6363 4.80363 76.8541 4.80698 77.3771V78.5201Z" fill="#48494A"/>
+                    <path class="path" d="M71.289 82.529C71.2895 82.5591 71.2839 82.5889 71.2726 82.6168C71.2613 82.6446 71.2445 82.6699 71.2232 82.6912C71.2019 82.7125 71.1765 82.7292 71.1486 82.7405C71.1207 82.7518 71.0909 82.7574 71.0608 82.757C70.1736 82.8045 69.2841 82.7911 68.3988 82.7167C68.1202 82.6832 67.8751 82.3815 67.6166 82.0966C67.5923 82.072 67.5627 82.0532 67.5301 82.0415C67.4975 82.0298 67.4627 82.0256 67.4282 82.0291C67.3937 82.0326 67.3605 82.0439 67.331 82.0619C67.3014 82.08 67.2763 82.1044 67.2575 82.1335C66.8412 82.7771 66.0994 82.9648 65.2434 82.9279C63.8469 82.8709 63.2293 82.2977 63.1856 80.9167C63.1554 79.3581 63.1856 77.8028 63.1856 76.2441C63.1856 73.8139 63.7429 73.1402 66.1833 72.8921C67.0887 72.8392 67.9972 72.8752 68.8956 72.9994C70.8258 73.1737 71.6616 73.9581 71.3092 76.4754C71.3005 76.5299 71.2728 76.5796 71.2311 76.6158C71.1893 76.6519 71.1362 76.6723 71.0809 76.6731H67.808C67.7525 76.6729 67.699 76.6528 67.6571 76.6166C67.6152 76.5803 67.5878 76.5302 67.5797 76.4754L67.4555 75.5737C67.4467 75.5181 67.418 75.4675 67.3749 75.4311C67.3317 75.3948 67.277 75.3752 67.2205 75.3759H66.9453C66.9153 75.3764 66.8857 75.3827 66.8582 75.3946C66.8307 75.4064 66.8057 75.4236 66.7849 75.4451C66.764 75.4665 66.7475 75.4919 66.7365 75.5197C66.7254 75.5476 66.7199 75.5773 66.7204 75.6072V80.0553C66.7204 80.116 66.7443 80.1744 66.787 80.2176C66.8297 80.2609 66.8878 80.2857 66.9486 80.2866H67.2474C67.279 80.2862 67.3102 80.2794 67.339 80.2665C67.3679 80.2536 67.3938 80.235 67.4152 80.2118C67.4366 80.1885 67.453 80.1612 67.4634 80.1314C67.4738 80.1016 67.478 80.07 67.4757 80.0385C67.422 79.1838 67.3682 78.5871 67.3112 77.6921C67.3094 77.6609 67.3139 77.6297 67.3245 77.6003C67.3351 77.5709 67.3516 77.5439 67.3729 77.5211C67.3943 77.4982 67.42 77.4799 67.4486 77.4672C67.4772 77.4546 67.5081 77.4478 67.5394 77.4474H71.0742C71.1044 77.4474 71.1344 77.4535 71.1623 77.4651C71.1902 77.4768 71.2156 77.4939 71.2368 77.5154C71.258 77.5369 71.2748 77.5624 71.286 77.5905C71.2973 77.6185 71.3029 77.6485 71.3025 77.6787L71.289 82.529Z" fill="#48494A"/>
+                    <path class="path" d="M104.572 73.0731H107.57C107.636 73.0731 107.699 73.0993 107.745 73.1458C107.792 73.1923 107.818 73.2554 107.818 73.3212C107.818 75.8888 107.845 78.4128 107.801 80.9368C107.801 81.7581 107.227 82.3178 106.459 82.5525C104.737 83.0804 102.896 83.0804 101.175 82.5525C100.741 82.4552 100.355 82.2083 100.086 81.8551C99.8164 81.502 99.6802 81.0653 99.7012 80.6217C99.7012 78.215 99.7012 75.8083 99.7012 73.3346C99.7012 73.2694 99.7269 73.2068 99.7728 73.1604C99.8187 73.1139 99.881 73.0874 99.9463 73.0865H103.014C103.08 73.0865 103.143 73.1127 103.19 73.1592C103.237 73.2057 103.263 73.2688 103.263 73.3346V80.1893C103.264 80.2545 103.29 80.3168 103.337 80.3626C103.383 80.4084 103.446 80.4341 103.511 80.434H104.102C104.135 80.4345 104.167 80.4285 104.197 80.4164C104.227 80.4043 104.254 80.3863 104.277 80.3636C104.301 80.3408 104.319 80.3137 104.331 80.2838C104.344 80.2539 104.35 80.2218 104.35 80.1893C104.35 79.0899 104.35 74.6083 104.35 73.3078C104.353 73.2485 104.376 73.192 104.417 73.1488C104.458 73.1057 104.513 73.0788 104.572 73.0731Z" fill="#48494A"/>
+                    <path class="path" d="M38.6036 82.7603H35.2266C35.197 82.761 35.1676 82.7554 35.1404 82.7437C35.1132 82.732 35.0889 82.7145 35.0691 82.6926C35.0494 82.6706 35.0346 82.6446 35.0258 82.6163C35.0171 82.5881 35.0146 82.5583 35.0185 82.529C35.1259 81.5972 35.5287 78.0642 35.7435 76.1804C35.8207 75.4932 35.9785 73.7804 36.0289 73.2072C36.0339 73.1556 36.058 73.1078 36.0965 73.0731C36.135 73.0384 36.1851 73.0192 36.237 73.0195H42.4639C42.5153 73.0192 42.5649 73.0378 42.6034 73.0718C42.6418 73.1059 42.6662 73.1529 42.672 73.2039C43.0234 76.3145 43.3725 79.4206 43.7194 82.5223C43.7232 82.5518 43.7207 82.5817 43.712 82.6101C43.7032 82.6385 43.6885 82.6647 43.6688 82.6869C43.6491 82.7092 43.6248 82.7269 43.5976 82.739C43.5704 82.7511 43.541 82.7572 43.5112 82.757H40.2014C40.1551 82.7568 40.1101 82.7413 40.0736 82.7127C40.0371 82.6842 40.0112 82.6443 40 82.5994L39.6643 81.3055C39.6526 81.2609 39.6265 81.2214 39.5902 81.1929C39.5538 81.1645 39.5091 81.1487 39.4629 81.148H39.3286C39.281 81.1483 39.2348 81.1647 39.1976 81.1945C39.1604 81.2244 39.1345 81.2658 39.1239 81.3122L38.8218 82.6095C38.8081 82.6557 38.779 82.6959 38.7393 82.7233C38.6996 82.7507 38.6517 82.7638 38.6036 82.7603ZM39.2078 76.2374L38.6673 78.1011C38.6596 78.129 38.6584 78.1583 38.6638 78.1867C38.6693 78.2151 38.6813 78.2419 38.6988 78.265C38.7164 78.288 38.739 78.3067 38.765 78.3196C38.791 78.3324 38.8196 78.3391 38.8486 78.3391H39.9463C39.9748 78.3393 40.003 78.3328 40.0285 78.3201C40.054 78.3074 40.0762 78.2889 40.0932 78.266C40.1102 78.2431 40.1216 78.2166 40.1264 78.1885C40.1312 78.1604 40.1293 78.1316 40.1208 78.1044L39.577 76.2441C39.567 76.205 39.5444 76.1703 39.5127 76.1453C39.4811 76.1203 39.4421 76.1063 39.4017 76.1055C39.3613 76.1048 39.3218 76.1173 39.2892 76.1411C39.2566 76.1649 39.2327 76.1987 39.2212 76.2374H39.2078Z" fill="#48494A"/>
+                    <path class="path" d="M18.4827 76.8675V78.7715C18.4832 78.7942 18.4791 78.8168 18.4707 78.8379C18.4623 78.859 18.4497 78.8783 18.4338 78.8945C18.4178 78.9108 18.3988 78.9236 18.3778 78.9324C18.3568 78.9412 18.3343 78.9458 18.3115 78.9458H16.2974C16.2747 78.9453 16.252 78.9494 16.2309 78.9578C16.2097 78.9662 16.1904 78.9787 16.1742 78.9946C16.1579 79.0106 16.145 79.0295 16.1362 79.0505C16.1274 79.0715 16.1229 79.094 16.1229 79.1167V80.0285C16.1229 80.0512 16.1274 80.0737 16.1362 80.0947C16.145 80.1156 16.1579 80.1346 16.1742 80.1505C16.1904 80.1665 16.2097 80.179 16.2309 80.1874C16.252 80.1958 16.2747 80.1998 16.2974 80.1994H18.3115C18.3344 80.1994 18.3571 80.2039 18.3783 80.2127C18.3995 80.2214 18.4187 80.2343 18.4349 80.2505C18.4512 80.2666 18.464 80.2859 18.4728 80.307C18.4816 80.3281 18.4861 80.3508 18.4861 80.3737V82.4988C18.4861 82.5217 18.4816 82.5444 18.4728 82.5656C18.464 82.5867 18.4512 82.6059 18.4349 82.6221C18.4187 82.6383 18.3995 82.6511 18.3783 82.6599C18.3571 82.6686 18.3344 82.6731 18.3115 82.6731H12.4505C12.4276 82.6731 12.4049 82.6686 12.3837 82.6599C12.3625 82.6511 12.3433 82.6383 12.3271 82.6221C12.3108 82.6059 12.298 82.5867 12.2892 82.5656C12.2804 82.5444 12.2759 82.5217 12.2759 82.4988V73.2541C12.2759 73.2312 12.2804 73.2086 12.2892 73.1874C12.298 73.1663 12.3108 73.1471 12.3271 73.1309C12.3433 73.1147 12.3625 73.1019 12.3837 73.0931C12.4049 73.0843 12.4276 73.0798 12.4505 73.0798H18.3149C18.3376 73.0798 18.3602 73.0844 18.3812 73.0932C18.4022 73.102 18.4212 73.1148 18.4371 73.1311C18.4531 73.1473 18.4656 73.1666 18.474 73.1877C18.4824 73.2088 18.4865 73.2314 18.4861 73.2541V75.3122C18.4861 75.3576 18.468 75.4011 18.4359 75.4331C18.4038 75.4652 18.3603 75.4832 18.3149 75.4832H16.284C16.2612 75.4832 16.2387 75.4877 16.2177 75.4965C16.1967 75.5053 16.1777 75.5182 16.1617 75.5344C16.1458 75.5507 16.1332 75.5699 16.1248 75.591C16.1164 75.6122 16.1123 75.6348 16.1128 75.6575V76.5223C16.1123 76.545 16.1164 76.5676 16.1248 76.5887C16.1332 76.6099 16.1458 76.6291 16.1617 76.6453C16.1777 76.6616 16.1967 76.6745 16.2177 76.6833C16.2387 76.6921 16.2612 76.6966 16.284 76.6966H18.2981C18.3217 76.6947 18.3454 76.6978 18.3677 76.7056C18.3901 76.7133 18.4106 76.7256 18.4279 76.7417C18.4453 76.7577 18.4591 76.7772 18.4685 76.7989C18.478 76.8205 18.4828 76.8439 18.4827 76.8675Z" fill="#48494A"/>
+                
+                </svg>
+                    
+            </div>
+        </div>
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
+        <div class="swiper-Container w-full flex overflow-hidden h-screen">
+            <div class="swiper-wrapper w-full h-full">
+                <div class="swiper-slide relative h-full overflow-hidden Section-1 w-full flex justify-center items-center">  
+                    <div class="slide-inner absolute left-0 top-0 bottom-0 overflow-hidden
+                    w-full h-full flex justify-center items-center">
+                        <div class="Banner-Slider h-full w-full justify-center items-center">
+                            <div class="swiper-banner h-full w-full flex overflow-hidden">
+                                <div class="swiper-wrapper w-full h-full">
+                                    <basis core="repeater" name="rep" datamembername="db.slider">
+                                        <basis core="dbsource" name="db" source="media" lid="1" sourcemid="19" usedforid="[##rep.current.id##]"> 
+                                            <member name="video" type="list" format="3"/> 
+                                        </basis>
+                                        <basis core="print" datamembername="db.video">
+                                            <layout>
+                                                @child
+                                            </layout>
+                                            <face filter="ord=1001">
+                                            <div class="swiper-slide relative w-full h-full flex justify-center items-center">
+                                                    <div class="IMG w-full h-full">
+                                                        <video src="@largeIMG" loop muted autoplay preload="auto"
+                                                        class="w-full h-full object-cover"></video>
+                                                    </div>
+                                                    <div class="OV absolute flex-col gap-5
+                                                    left-0 top-0 z-2 w-full h-full flex justify-center items-center">
+                                                    <div class="Title w-full flex justify-start items-start overflow-hidden">
+                                                         <h1 class="mr-[5%] font-Ravi500 translate-y-100 duration-200
+                                                            font-medium text-[22px] leading-34.1 text-white">
+                                                            [##rep.current.title##]
+                                                     </h1>
+                                                </div>
+                                                <div class="Text w-full flex justify-start items-start flex-col overflow-hidden">
+                                                    <p class="mr-[5%] font-Ravi500 translate-y-100 duration-200
+                                                     font-medium text-base leading-24.18 text-white">
+                                                     @description
+                                                </p>
+                                                </div>
+                                                <div class="Btn w-auto flex justify-start items-start 
+                                                ml-auto mr-[5%]">
+                                                 <a href="[##rep.current.link##]" alt="[##rep.current.title##]"
+                                                 title="[##rep.current.title##]" class="ShowBTN w-max px-[.8em] group/btn rounded-[5px]
+                                                 hover:bg-dark duration-[.5s]
+                                                 py-[.4em] bg-main flex justify-center items-center gap-2">
+                                                                    
+                                                 <span class="Icon w-auto flex justify-center items-center">
+                                                    <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1 4.5H9M5 0.5V8.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                                                
+                                                </span>
+                                                <span class="Text font-Ravi400 font-normal text-[10px]
+                                                 text-white leading-15.05">
+                                                 اطلاعات بیشتر
+                                                </span>
+                                            </a>
+                                            </div>
+                                          </div>
+                                            </div>
+                                            </face>
+                                        </basis>
+                                    </basis>
+                                    
+                                </div>                                          
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            
+                            </div>
+                        </div>
+               </div> 
+               <div class="swiper-slide relative overflow-hidden h-full Section-2 w-full flex justify-center items-center">
+                <div class="Sec-2  slide-inner absolute left-0 top-0 bottom-0 overflow-hidden
+                 w-full h-full flex justify-center flex-col items-center" style="background: url(../images/pattern_A_light.png);">
+              <div class="Content w-full flex-col justify-end h-[87vh] mt-auto">
+                <div class="Right  w-full h-auto flex justify-center items-center">
+                    <div class=" h-full w-full flex flex-col justify-center items-center">
+                       <div class="Title-1 relative z-3 w-[85%] mx-auto flex justify-start items-start">
+                        <basis core="print" datamembername="db.def-about1">
+                            <layout>
+                                @child
+                            </layout>
+                            <face filter="RowNumber=1">
+                                <h2 class="font-Ravi500 font-medium text-base leading-24.18 text-main"> 
+                                    @text
+                                </h2>
+                            </face>
+                        </basis>
+                       </div>
+   
+                       <div class="Title-2 mt-[.5em] relative z-3 w-[85%] mx-auto justify-start items-start">
+                        <basis core="print" datamembername="db.def-about">
+                            <layout>
+                                @child
+                            </layout>
+                            <face filter="TypeID=128">
+                          <h2 class="font-Ravi500 font-medium text-sm leading-21.17 text-dark">
+                            @text
+                          </h2>
+                            </face>
+                        </basis>
+                       </div>
+                       <basis core="print" datamembername="db.def-about">
+                        <layout>
+                            @child
+                        </layout>
+                        <face filter="TypeID=129">
+                       <div class="Text mt-[1em] relative z-3 w-[85%] mx-auto flex justify-start items-start flex-col">
+                                <p class="font-Ravi400 font-normal text-[12px] leading-20 text-dark text-justify">
+                                    @largetext
+                                 </p> 
+                       </div>
+                        </face>
+                       </basis>
+                       <div class="Btn relative z-3 w-auto flex justify-start items-start ml-auto mr-[8%]  mt-[1.5em]">
+                        <a href=" درباره‌ی-ما" title="درباره‌ی ما " alt="درباره‌ی ما " class="ShowBTN w-max px-[.8em] group/btn rounded-[5px]
+                         hover:bg-dark duration-[.5s]
+                         py-[.4em] bg-main flex justify-center items-center gap-2">
+                         
+                            <span class="Icon w-auto flex justify-center items-center">
+                                <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 4.5H9M5 0.5V8.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    
+                            </span>
+                            <span class="Text font-Ravi400 font-normal text-[10px] text-white leading-15.05">
+                                اطلاعات بیشتر
+                            </span>
+                        </a>
+                    </div>
+                    </div>
+                 </div>
+                 <div class="Left w-full h-[70%] flex mt-[.5em]">
+                    <basis core="print" datamembername="db.def-gallery">
+                        <layout>
+                            @child
+                        </layout>
+                        <face filter="ord=50">
+                            <div class="IMG w-full h-full">
+                                <img src="@largeIMG" alt="Fahandej" title="Fahandej"  class="w-full h-full object-cover">
+                            </div>
+                        </face>
+                    </basis>
+                 </div>
+                </div>
+              </div>
+              
+             </div>
+             <div class="swiper-slide relative proj
+              overflow-hidden h-full proj-Section-1 w-full flex justify-center items-center">
+                <div class="proj-Sec-1 slide-inner absolute left-0 top-0 bottom-0 overflow-hidden
+                w-full h-full flex justify-center items-center">
+                <div class="Projects-Container h-[90vh] mt-auto flex-col justify-end w-full mx-auto gap-3 flex">
+                    <div class="top w-[90%] mx-auto flex h-auto flex-col justify-center items-center">
+                        <div class="Title-1 w-full mx-auto flex justify-start items-start mb-[.5em]">
+                            <basis core="print" datamembername="db.descr-prj">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face>
+                            <h3 class="font-Ravi500 font-medium text-sm leading-21.17 text-dark"> 
+                                @urltitle
+                            </h3>  
+                                </face>
+                            </basis>              
+                       </div>
+                       <div class="Text ml-auto w-[90%]  flex justify-start items-start flex-col">
+                        <basis core="print" datamembername="db.descr-prj">
+                            <layout>
+                                @child
+                            </layout>
+                            <face>
+                          <p class="font-Ravi400 font-normal text-[12px] leading-20 text-dark text-justify">
+                            @urldescription
+                          </p>
+                            </face>
+                        </basis>
+                       </div>
+                       <div class="Btn w-auto flex justify-start items-start ml-auto  mt-[1.5em]">
+                        <a  href="مجتمع-های-مسکونی " alt="پروژه‌ها" title="پروژه‌ها" class="ShowBTN w-max px-[.8em] group/btn rounded-[5px]
+                         hover:bg-dark duration-[.5s]
+                         py-[.4em] bg-main flex justify-center items-center gap-2">
+                         
+                            <span class="Icon w-auto flex justify-center items-center">
+                                <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 4.5H9M5 0.5V8.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    
+                            </span>
+                            <span class="Text font-Ravi400 font-normal text-[10px] text-white leading-15.05">
+                                سایر پروژه‌ها
+                            </span>
+                        </a>
+                    </div>
+                    </div>
+                  <div class="bottom  w-full h-[70%] flex mb-[2em]">
+                    <basis core="print" datamembername="db.mdef-project">
+                        <layout>
+                            @child
+                        </layout>
+                        <face filter="RowNumber=1">
+                    <a href="@link" title="@title" alt="@title" class="Project w-full h-full min-h-[80%] before:content-[''] before:absolute
+                                before:left-0 before:top-0 before:h-full before:w-full before:opacity-0 [&.hide]:before:opacity-[1]
+                               before:z-3 before:bg-[#26262773] before:duration-[.7s] [&.onn]:before:opacity-0
+                                  relative  duration-[.7s] ease-in-out">
+                                     <div class="IMG w-full h-full 
+                                      flex justify-start items-start">
+                                         <img src="@00360X00580prp" loading="lazy"
+                                         title="@title" alt="@title" class="w-full ml-auto h-full object-cover">
+                                     </div>
+                                     <div class="OV absolute left-0 top-0 z-1 w-full h-full flex justify-end items-end">
+                                         <div class="Title w-full flex py-[1.5em] justify-center items-center">
+                                             <p class="font-Ravi500 font-medium text-lg leading-27.09 text-white">
+                                                @title
+                                             </p>
+                                         </div>
+                                     </div>
+                    </a>                                     
+                        </face>
+                    </basis>
+                  </div>
+                </div>
+                </div>
+            </div>
+       
+            <basis core="print" datamembername="db.mdef-project">
+                <layout>
+                    @child
+                </layout>
+                <face filter="RowNumber not in (1)">
+            <div class="swiper-slide relative proj
+            overflow-hidden h-full proj-Section-@RowNumber w-full flex justify-center items-center">
+                <div class="proj-Sec-@RowNumber slide-inner absolute left-0 top-0 bottom-0 overflow-hidden
+                w-full h-full flex justify-center items-center">
+                <div class="Projects-Container h-[90vh] mt-auto flex-col justify-end w-full mx-auto gap-3 flex">
+              
+                  <div class="bottom  w-full h-[85%] my-auto flex">
+                    <a href="@link" title="@title" alt="@title" class="Project w-full h-full before:content-[''] before:absolute
+                    before:left-0 before:top-0 before:h-full before:w-full before:opacity-0 [&.hide]:before:opacity-[1]
+                    before:z-3 before:bg-[#26262773] before:duration-[.7s] [&.onn]:before:opacity-0
+                        relative  duration-[.7s] ease-in-out">
+                            <div class="IMG w-full h-full 
+                                flex justify-start items-start">
+                                <img src="@00360X00580prp" title="@title" alt="@title" loading="lazy"
+                                title="@title" alt="@title" class="w-full ml-auto h-full object-cover">
+                            </div>
+                              <div class="OV absolute left-0 top-0 z-1 w-full h-full flex justify-end items-end">
+                                <div class="Title w-full flex py-[1.5em] justify-center items-center">
+                                <p class="font-Ravi500 font-medium text-[22px] leading-34.1 text-white">
+                                                @title
+                                </p>
+                             </div>
+                        </div>
+                    </a>                                     
+
+                  </div>
+                </div>
+                </div>
+            </div>
+                </face>
+            </basis>
+
+            <div class="swiper-slide relative overflow-hidden blog
+             h-full blog-Section-1 w-full flex justify-center items-center">
+                <div class="blog-Sec-1 slide-inner absolute left-0 top-0 bottom-0 overflow-hidden bg-dark
+                w-full h-full flex justify-center items-center">
+                <div class="Blogs-Container w-[90%] mt-auto mx-auto h-[90vh] flex gap-4">
+                    <div class="Right w-[90%] mx-auto h-full mb-auto mt-auto 
+                     gap-2 flex flex-col justify-start items-start">
+                        <div class="Top w-full flex flex-col">
+                            <div class="Title-1 w-full mx-auto flex justify-start items-start mb-[.5em]">
+                                <basis core="print" datamembername="db.descr-blog">
+                                    <layout>
+                                        @child
+                                    </layout>
+                                    <face>
+                                        <h4 class="font-Ravi500 font-medium text-sm leading-21.17 text-white"> 
+                                            @urltitle
+                                          </h4>
+                                    </face>
+                                </basis>
+                           </div>
+                           <div class="Text mt-[.5em] ml-auto w-full  flex justify-start items-start flex-col">
+                            <basis core="print" datamembername="db.descr-blog">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face>
+                              <p class="font-Ravi400 font-normal text-[12px] leading-20 text-white text-justify">
+                                @urldescription
+                            </p>
+                                </face>
+                            </basis>
+                           </div>
+                           <div class="Btn w-auto flex justify-start items-start ml-auto  mt-[1.5em]">
+                            <a href="بلاگ" title="بلاگ" alt="بلاگ" class="ShowBTN w-max px-[.8em] group/btn rounded-[5px]
+                             hover:bg-dark duration-[.5s]
+                             py-[.4em] bg-main flex justify-center items-center gap-2">
+                             
+                                <span class="Icon w-auto flex justify-center items-center">
+                                    <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 4.5H9M5 0.5V8.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        
+                                </span>
+                                <span class="Text font-Ravi400 font-normal text-[10px] text-white leading-15.05">
+                                    مقالات بیشتر
+                                </span>
+                            </a>
+                        </div>
+                        </div>
+                        <div class="Bottom w-full h-[75%] mt-auto flex-col
+                         flex justify-start items-start rounded-[3px]">
+                         <basis core="print" datamembername="db.mdef-blog">
+                            <layout>
+                                @child
+                            </layout>
+                            <face filter="RowNumber=1">
+                          <a  href="@link" class="Blog rounded-[3px] group w-full h-[85%] flex relative  duration-[1s] hover:scale-[.93]">
+                                        <div class="IMG w-full h-full rounded-[3px] flex justify-center items-center">
+                                            <img src="/@00300x00300prp" alt="@title" title="@title" class="rounded-[3px] w-full h-full duration-[.5s]
+                                             filter grayscale-[1] object-cover group-hover:grayscale-[0]">
+                                        </div>
+                                        <div class="OV absolute rounded-[3px] left-0 bottom-0 w-full h-full z-1 flex justify-start items-end">
+                                            <div class="Title w-auto mr-[1em] mb-[1em]">
+                                                <p class="font-Ravi500 text-[12px] font-medium duration-[.5s] group-hover:translate-x-[-1em]
+                                                 leading-18.6 text-white group-hover:translate-y-[-.8em]">
+                                                   @title
+                                                </p>
+                                            </div>
+                                        </div>
+                            </a>
+                            </face>
+                         </basis>
+                        </div>
+                    </div>
+                   
+                </div>
+                </div>
+            </div>
+            <basis core="print" datamembername="db.mdef-blog">
+                <layout>
+                    @child
+                </layout>
+                <face filter="RowNumber not in (1)">
+            <div class="swiper-slide relative overflow-hidden blog
+            h-full blog-Section-@RowNumber w-full flex justify-center items-center">
+               <div class="blog-Sec-@RowNumber slide-inner absolute left-0 top-0 bottom-0 overflow-hidden bg-dark
+               w-full h-full flex justify-center items-center">
+               <div class="Blogs-Container w-[90%] mt-auto mx-auto h-[90vh] flex gap-4">
+                   <div class="Right w-[90%] mx-auto h-full mb-auto mt-auto 
+                    gap-2 flex flex-col justify-start items-start">
+                       <div class="Bottom w-full h-[75%] mt-auto flex-col
+                        flex justify-start items-start">
+                         <a  href="@link" class="rounded-[3px] Blog group w-full h-[85%] flex relative  duration-[1s] hover:scale-[.93]">
+                             <div class="IMG rounded-[3px] w-full h-full flex justify-center items-center">
+                            <img src="/@00300x00300prp" alt="@title" title="@title" class=" w-full h-full duration-[.5s]
+                                filter grayscale-[1] rounded-[3px] object-cover group-hover:grayscale-[0]">
+                        </div>
+                        <div class="OV absolute rounded-[3px] left-0 bottom-0 w-full h-full z-1 flex justify-start items-end">
+                            <div class="Title w-auto mr-[1em] mb-[1em]">
+                             <p class="font-Ravi500 text-[12px] font-medium duration-[.5s] group-hover:translate-x-[-1em]
+                             leading-18.6 text-white group-hover:translate-y-[-.8em]">
+                                @title
+                            </p>
+                            </div>
+                        </div>
+                           </a>
+              
+                       </div>
+                   </div>
+                  
+               </div>
+               </div>
+           </div>
+                </face>
+            </basis>
+
+            </div>
+        </div>
+        <basis core="call" file="footer1.inc" pageindex="[##cms.cms.pageindex##]" />
+    </main>
+    <basis core="call" file="script-mobile.inc" />
+    <script src="[##cms.cms.cdn##]/_js/swiper.js"></script>
+    <script src="[##cms.cms.cdn##]/js/home-Mobile.js"></script>
+</body>
+</html>

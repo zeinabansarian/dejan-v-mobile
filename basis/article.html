@@ -1,0 +1,190 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2362515"> 
+    <member name="article" type="view"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2362515"> 
+    <member name="title" type="view" postsql="select * from [db.title] where TypeID=150"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2362515"> 
+    <member name="det" type="view" postsql="select * from [db.det] where TypeID=128"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2362515"> 
+    <member name="text" type="view" postsql="select * from [db.text] where TypeID=250"/> 
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2362515"> 
+    <member name="articleGallery" type="list" format="4"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2362515"> 
+    <member name="related-project" type="list" blgid="1611" size="360x580"/> 
+</basis>	    
+<basis core="dbsource" source="basiscore" name="json" lid="1" usedforid="[##cms.query.id##]" > 
+    <member request="json-ld" type="scalar" name="fq" /> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]">
+    <member name="blog" type="list" typeid="159" perpage="100" link="articl.bc"/> 
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[##cms.seo.title##]</title>
+    <meta name="description" content="[##cms.seo.description##]">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputMobile.css">
+</head>
+<body>
+    <main class="articleShow-mobile overflow-hidden" dir="rtl">
+        <span class="bloglink hidden" datalink="[##db.blog.link##]" >
+
+        </span>
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
+        <div class="Article-container mt-[8em] w-full flex flex-col">
+            <div class="Top w-full  mx-auto flex justify-start flex-col items-start gap-3">
+                <div class="Title w-[90%]  mx-auto flex justify-start items-start">
+                    <h1 class="font-Ravi500 font-medium text-sm leading-21.17 text-dark">
+                        [##db.title.Answer##]
+                    </h1>
+                </div>
+               <div class="Det w-[90%]  mx-auto flex justify-between items-start gap-3">
+                <div class="Right w-[50%] flex flex-col items-start justify-start">
+                    <span class="Author w-auto flex justify-center 
+                    items-center font-Ravi400 font-normal text-[10px] leading-15.05 text-dark">
+                    نویسنده: <basis core="print" datamembername="db.det">
+                        <layout>
+                            @child
+                        </layout>
+                        <face filter="RowNumber=1">
+                            @largetext
+                        </face>
+                    </basis>
+                    </span>
+                    <span class="Date w-auto flex justify-center font-Ravi400 font-normal text-[10px] leading-15.05 text-dark
+                    items-center">
+                    <basis core="print" datamembername="db.det">
+                        <layout>
+                            @child
+                        </layout>
+                        <face filter="RowNumber=2">
+                            @largetext
+                        </face>
+                    </basis>
+                    </span>
+                </div>
+                <div class="Left w-auto flex items-end justify-end sharee hover:cursor-pointer">
+                    <div class="share w-max relative translate-y-[.3em]">
+                        <ul class="share__wrapper share__wrapper--open-left !static flex justify-center items-center">
+                            <li class="social-link">
+                                <a href="" title="twitter" class="twitter">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.8544 9.74149L1.49509 16.9991M15.315 1.00091L9.66011 7.66057M1 1L13.544 17H17L4.45646 1H1Z" stroke="#262627" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        
+                                </a>
+                            </li>
+                            <li class="social-link">
+                                <a href="" title="whatsapp" class="whatsapp">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.0163 19C8.39887 19 6.81418 18.5631 5.42621 17.7439L5.09834 17.5473L1.68852 18.443L2.59562 15.1226L2.37704 14.784C1.47841 13.3498 1.00125 11.6921 1 10C1 5.04126 5.0437 1 10.0054 1C12.4098 1 14.6721 1.93932 16.366 3.6432C17.2048 4.47763 17.8695 5.47014 18.3217 6.56321C18.7738 7.65627 19.0043 8.82815 18.9999 10.0109C19.0218 14.9697 14.9781 19 10.0163 19ZM14.9562 12.2718C14.683 12.1408 13.3497 11.4854 13.1092 11.3871C12.8579 11.2998 12.683 11.2561 12.4972 11.5182C12.3114 11.7913 11.7978 12.4029 11.6448 12.5777C11.4918 12.7634 11.3278 12.7852 11.0546 12.6432C10.7814 12.5121 9.90706 12.2172 8.87974 11.2998C8.071 10.5789 7.53549 9.69417 7.37155 9.42112C7.21855 9.14806 7.34969 9.00607 7.49177 8.86408C7.61199 8.74393 7.76499 8.54733 7.89614 8.39442C8.02729 8.2415 8.08193 8.12136 8.16936 7.9466C8.25679 7.76092 8.21308 7.60801 8.14751 7.47694C8.08193 7.34587 7.53549 6.01335 7.31691 5.46723C7.09833 4.94296 6.86882 5.0085 6.70489 4.99757H6.1803C5.99451 4.99757 5.71036 5.06311 5.45899 5.33617C5.21856 5.60922 4.51911 6.26456 4.51911 7.59709C4.51911 8.92961 5.49178 10.2184 5.62293 10.3932C5.75408 10.5789 7.53549 13.3095 10.2459 14.4782C10.8907 14.7621 11.3934 14.926 11.7868 15.0461C12.4316 15.2536 13.0218 15.2209 13.4917 15.1553C14.0163 15.0789 15.0983 14.5 15.3169 13.8665C15.5464 13.233 15.5464 12.6978 15.4699 12.5777C15.3934 12.4575 15.2294 12.4029 14.9562 12.2718Z" stroke="#262627"/>
+                                        </svg>
+                                        
+                                </a>
+                            </li>
+                            <li class="social-link">
+                                <a href="" title="instagram" class="instagram">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.2033 5.17622C15.104 5.17622 15.0087 5.13673 14.9384 5.06645C14.8681 4.99617 14.8286 4.90086 14.8286 4.80147C14.8286 4.70208 14.8681 4.60676 14.9384 4.53648C15.0087 4.4662 15.104 4.42672 15.2033 4.42672M15.2033 5.17622C15.3027 5.17622 15.398 5.13673 15.4683 5.06645C15.5386 4.99617 15.5781 4.90086 15.5781 4.80147C15.5781 4.70208 15.5386 4.60676 15.4683 4.53648C15.398 4.4662 15.3027 4.42672 15.2033 4.42672" stroke="#262627" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M1.0015 4.85693C1.0015 3.83401 1.40782 2.85298 2.13107 2.12967C2.85433 1.40635 3.83527 1 4.85811 1H15.1434C15.6498 1 16.1513 1.09976 16.6193 1.29359C17.0872 1.48742 17.5123 1.77152 17.8704 2.12967C18.2285 2.48782 18.5126 2.913 18.7064 3.38095C18.9002 3.84889 19 4.35043 19 4.85693V15.1431C19 16.166 18.5937 17.147 17.8704 17.8703C17.1472 18.5936 16.1662 19 15.1434 19H4.85661C3.83377 19 2.85283 18.5936 2.12957 17.8703C1.40632 17.147 1 16.166 1 15.1431L1.0015 4.85693Z" stroke="#262627" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M6.17862 10C6.17862 10.502 6.27748 10.999 6.46956 11.4628C6.66164 11.9266 6.94317 12.3479 7.29809 12.7029C7.65301 13.0578 8.07436 13.3394 8.53808 13.5315C9.0018 13.7236 9.49882 13.8225 10.0007 13.8225C10.5027 13.8225 10.9997 13.7236 11.4634 13.5315C11.9271 13.3394 12.3485 13.0578 12.7034 12.7029C13.0583 12.3479 13.3399 11.9266 13.5319 11.4628C13.724 10.999 13.8229 10.502 13.8229 10C13.8229 8.98622 13.4202 8.01397 12.7034 7.29712C11.9866 6.58027 11.0144 6.17755 10.0007 6.17755C8.98706 6.17755 8.01488 6.58027 7.29809 7.29712C6.5813 8.01397 6.17862 8.98622 6.17862 10Z" stroke="#262627" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        
+                                </a>
+                            </li>
+                            <button class="toggle-button">
+                             
+                                <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.75 3.33333L4.25 5.66667M7.75 10.6667L4.25 8.33333M4.25 7C4.25 7.44203 4.06563 7.86595 3.73744 8.17851C3.40925 8.49107 2.96413 8.66667 2.5 8.66667C2.03587 8.66667 1.59075 8.49107 1.26256 8.17851C0.934374 7.86595 0.75 7.44203 0.75 7C0.75 6.55797 0.934374 6.13405 1.26256 5.82149C1.59075 5.50893 2.03587 5.33333 2.5 5.33333C2.96413 5.33333 3.40925 5.50893 3.73744 5.82149C4.06563 6.13405 4.25 6.55797 4.25 7ZM11.25 11.3333C11.25 11.7754 11.0656 12.1993 10.7374 12.5118C10.4092 12.8244 9.96413 13 9.5 13C9.03587 13 8.59075 12.8244 8.26256 12.5118C7.93437 12.1993 7.75 11.7754 7.75 11.3333C7.75 10.8913 7.93437 10.4674 8.26256 10.1548C8.59075 9.84226 9.03587 9.66667 9.5 9.66667C9.96413 9.66667 10.4092 9.84226 10.7374 10.1548C11.0656 10.4674 11.25 10.8913 11.25 11.3333ZM11.25 2.66667C11.25 3.10869 11.0656 3.53262 10.7374 3.84518C10.4092 4.15774 9.96413 4.33333 9.5 4.33333C9.03587 4.33333 8.59075 4.15774 8.26256 3.84518C7.93437 3.53262 7.75 3.10869 7.75 2.66667C7.75 2.22464 7.93437 1.80072 8.26256 1.48816C8.59075 1.17559 9.03587 1 9.5 1C9.96413 1 10.4092 1.17559 10.7374 1.48816C11.0656 1.80072 11.25 2.22464 11.25 2.66667Z" stroke="#262627" stroke-linecap="round"/>
+                                    </svg>
+                                    
+                            </button>
+                          </ul>
+                    </div>
+                    <p class="font-Ravi400 font-normal text-[10px] leading-15.05 text-dark">اشتراک گذاری</p>
+                
+                </div>
+              
+               </div>
+               <basis core="print" datamembername="db.articleGallery">
+                <layout>
+                    @child
+                </layout>
+                <face filter="ord=1">
+               <div class="Banner w-full flex justify-center items-center mt-[1em]">
+                <img src="@largeIMG" alt="[##db.title.Answer##]" title="[##db.title.Answer##]" class="w-full object-cover">
+               </div>
+                </face>
+               </basis>
+            </div>
+            <div class="Bottom w-full flex mb-[2em] flex-col mt-[3em]">
+              <div class="TextC w-[90%] mx-auto flex flex-col gap-6">
+                <basis core="print" datamembername="db.text">
+                    <layout>
+                        <div class="content w-full flex justify-start items-start flex-col gap-3">
+                            @child
+                        </div>
+                    </layout>
+                    <face>
+                        <div class="Title w-full flex justify-start items-start">
+                            <h3 class="font-Ravi500 font-medium text-sm leading-21.17 text-dark text-justify">
+                                @text
+                            </h3>
+                        </div>
+                        <div class="Text w-full flex justify-start items-start flex-col gap-3">
+                            <p class="font-Ravi400 font-normal text-[12px] leading-20 text-dark text-justify">
+                                @largetext
+                            </p>
+                         
+                        </div>
+                    </face>
+                </basis>
+              </div>
+            </div>
+            <basis core="print" datamembername="db.related-project">
+                <layout>
+                    <div class="Related-Project w-full  flex flex-col gap-3">
+                        <div class="Title w-[90%]  mx-auto flex justify-start items-start">
+                            <h4 class="font-Ravi500 font-medium text-sm leading-21.17 text-dark"> 
+                               پروژه‌های مرتبط
+                            </h4>
+                       </div>
+                       <div class="projects w-full flex justify-center flex-col items-center mt-[1em] mb-[2em]">
+                        <div class="Projects-Container w-full mx-auto flex justify-center flex-col gap-7 ">
+                       @child
+                        </div>
+                       </div>
+                    </div>
+                </layout>
+                <face>
+                    <a href="@link"  alt="@title" title="@title" class="Project w-full  before:content-[''] before:absolute
+                    before:left-0 before:top-0 before:h-full before:w-full before:opacity-0 [&.hide]:before:opacity-[1]
+                   before:z-3 before:bg-[#26262773] before:duration-[.7s] [&.onn]:before:opacity-0
+                      relative hover:w-[95%] duration-[.7s] ease-in-out">
+                         <div class="IMG w-full flex justify-center  items-center">
+                             <img src="@00360X00580prp" alt="@title" title="@title" class="w-full  object-cover">
+                         </div>
+                         <div class="OV absolute left-0 top-0 z-1 w-full h-full flex justify-end items-end">
+                             <div class="Title w-full flex py-[1.5em] justify-center items-center">
+                                 <p class="font-Ravi500 font-medium text-[22px] leading-34.1 text-white">
+                                    @title
+                                 </p>
+                             </div>
+                         </div>
+                     </a>
+                </face>
+            </basis>
+            <basis core="call" file="footer1.inc" pageindex="[##cms.cms.pageindex##]" />
+        </div>
+    </main>
+    <basis core="call" file="script-mobile.inc" />
+    <script src="[##cms.cms.cdn##]/js/article-Mobile.js"></script>
+</body>
+</html>

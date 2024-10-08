@@ -13,7 +13,10 @@ setTimeout(()=>{
   
     lenis.stop();
   },1001)
-
+  gsap.to('footer',{
+    opacity:0,
+    duration:.5
+    })
   
   function raf(time) {
     lenis.raf(time);
@@ -38,14 +41,14 @@ let slideinner = document.querySelector(".Section-3");
         // main slider
         
         let swiperMin = new Swiper('.swiper-Container', {
-            loop: false,
-            direction: "vertical",
-            autoplay: false,
-            speed: 1000,
-            grabCursor: false,
-            watchSlidesProgress: true,
-            mousewheelControl: true,
-            touchReleaseOnEdges : true,
+          loop: false,
+          direction: "vertical",
+          autoplay: false,
+          speed: 1000,
+          grabCursor: false,
+          watchSlidesProgress: true,
+          touchReleaseOnEdges : true,
+          releaseOnEdges : true,
             mousewheel: true,
               pagination: {
                 el: '.swiper-Container > .swiper-pagination',
@@ -110,20 +113,29 @@ let slideinner = document.querySelector(".Section-3");
                     document.querySelector('header').classList.remove('dark')
                     document.querySelector('header').classList.remove('darkLogo')
                  }
-
+                 swiper.params.touchReleaseOnEdges = false;
+                 swiper.params.mousewheel.releaseOnEdges = false;
                   },
                   reachEnd: function () {
                     let swiper = this;
                     setTimeout(function () {
-                        swiper.mousewheel.disable();
-                        swiper.params.touchReleaseOnEdges = false
-                        swiper.params.mousewheel.releaseOnEdges = false;
+                        // swiper.mousewheel.disable();
+                        swiper.params.touchReleaseOnEdges = true;
+                        swiper.params.mousewheel.releaseOnEdges = true;
+                        gsap.to('footer',{
+                          opacity:1,
+                          duration:.5
+                          })
                         lenis.start();
                       console.log("end"); 
                     }, 500);
                   },
                   touchEnd :function(){
-                    swiper.mousewheel.disable();
+                    // swiper.mousewheel.disable();
+                    gsap.to('footer',{
+                      opacity:1,
+                      duration:.5
+                      })
                     lenis.start();
                   console.log("end"); 
                   },
@@ -133,6 +145,14 @@ let slideinner = document.querySelector(".Section-3");
                   reachBeginning: function () {
                     let swiper = this;
                     console.log("begin");
+                    lenis.scrollTo('.sec-1');
+            
+                    setTimeout(function () {
+                      // swiperMin.mousewheel.enable();
+                        swiper.params.touchReleaseOnEdges = true;
+                        swiper.params.mousewheel.releaseOnEdges = true;
+                        lenis.stop();
+                    }, 500);
                   },
               }
             });
@@ -151,9 +171,13 @@ let slideinner = document.querySelector(".Section-3");
                  onLeaveBack=()=>{
                  console.log('onLeaveBack');
                  setTimeout(()=> {
-                    swiperMin.mousewheel.enable();
+                    // swiperMin.mousewheel.enable();
                     swiperMin.params.touchReleaseOnEdges = true
                     swiperMin.params.mousewheel.releaseOnEdges = true;
+                    gsap.to('footer',{
+                      opacity:0,
+                      duration:.5
+                      })
                     lenis.stop();
                 },100);           
                  }

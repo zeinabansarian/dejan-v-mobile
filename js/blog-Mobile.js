@@ -52,7 +52,7 @@ btnF.forEach(b=>{
   })
   e.currentTarget.classList.add('active')
   e.currentTarget.querySelector('.ShowBTN').classList.remove('active')
-  var url = `/load-blog.inc?catid=${catid}`;
+  var url = `/load-blogMobile.inc?catid=${catid}`;
   $(".Articles").load(url);
   setTimeout(() => {
       gsap.to('.Blog',{
