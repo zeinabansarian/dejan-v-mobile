@@ -186,13 +186,13 @@
                                         </p>
                                     </div>
 
-                                    <div class="imgS h-full">
-                                        <img class="opacity-60 h-full" src="images/map_frame.png" alt="map" title="map">
+                                    <div class="imgS h-full w-full">
+                                        <img class="opacity-50 w-full h-full" src="[##cms.cms.cdn##]/images/footer-mobile.jpg" alt="map" title="map">
                                     </div>
 
 
                                     <div
-                                        class="Socials rounded-tl-[3px] rounded-tr-[3px] p-2.5 absolute bottom-20 bg-white z-1 w-90p flex justify-between items-center gap-3">
+                                        class="Socials absolute rounded-tl-[3px] rounded-tr-[3px] p-2.5 bg-white z-1 w-90p flex justify-between items-center gap-3" style="bottom: 236px;">
                                         <basis core="print" datamembername="db.contactus">
 
                                             <face filter="text='آپارات'">
@@ -404,7 +404,7 @@
                         </div>
 
 
-                        <div class="section3 darkSection pt-32 mainSlide relative after:bg-dark/[0.95] after:absolute after:w-full after:h-full after:inset-0"
+                        <div class="section3 darkSection h-svh flex flex-col justify-between darkSection pt-32 mainSlide relative after:bg-dark/[0.95] after:absolute after:w-full after:h-full after:inset-0"
                             style="background: url('images/bg-pattern.png');">
                             <div class="info w-90p mx-auto relative z-1 flex flex-col items-center">
                                 <h3 class="font-Ravi500 text-sm text-white mb-5 text-center">
@@ -551,7 +551,7 @@
                                 </div>
 
                                 <nav class="mb-16">
-                                    <ul class="flex items-center flex-wrap gap-7 justify-center px-10">
+                                    <ul class="flex items-center flex-wrap gap-7 justify-center px-5">
                                         <li>
                                             <a class="font-Ravi500 text-sm text-white" href="/" title="صفحه‌ی نخست">
                                                 صفحه‌ی نخست
@@ -631,7 +631,7 @@
     <div
         class="formPopUp duration-1000 z-[15] fixed inset-0 flex items-center justify-center w-svw h-svh bg-dark/[0.8]">
         <div
-            class="innerForm relative w-full h-full border border-white bg-dark px-7 pt-14 pb-7 max-w-[563px] max-h-[515px]">
+            class="innerForm relative w-full h-full  bg-dark px-7 pt-14 pb-7 max-w-[563px] max-h-[515px]">
             <div class="closePopForm absolute cursor-pointer z-1 top-7 right-7">
                 <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2 1.5L16 15.5M2 15.5L16 1.5" stroke="white" stroke-width="1.5" stroke-linecap="round"
@@ -639,9 +639,64 @@
                 </svg>
 
             </div>
-            <form action="">
+            <form name="myForm" class="homeForm1" action="" onsubmit="return validateForm()" method="post">
+                <basis core="schema" run="atclient"
+                    schemaUrl="/schema/domainform/4FBC5806-5C68-455A-9691-888C8B1248D2/CFEFECBE-FA84-4D58-9460-5773BEBCB0FA/fa/فرم-پیشنهادات-و-انتقادات"
+                    displayMode="new" button="[data-btn-add1]" resultSourceId="demo.data1" onRendered="renderFn1">
+                </basis>
+                <basis core="callback" run="AtClient" triggers="demo.data1" method="onSource1"></basis>
+                <basis core="api" url="/schema/domainform/4FBC5806-5C68-455A-9691-888C8B1248D2/fa/editobject"
+                    method="post" run="atclient"
+                    body="object_edit={##edit.object1.value##}&captcha={##edit.object1.captcha##}&captchaid={##edit.object1.captchaid##}"
+                    content-type="application/x-www-form-urlencoded" triggers="edit.object1" if="{##edit.object1##}"
+                    OnProcessed="OnProcessedEditObject1">
+                </basis>
+                <div data-bc-question="" class="qclass8">
+                    <div class="responsMsg1 responsMsg">
+                        <span>فرم با موفقیت ثبت شد.</span>
+                    </div>
+                    <div id="requestBox" class="captchaContainerclass captcha-sefaresh2" style="margin-bottom: 20px"
+                        data-bc-answer-container="" data-bc-schema-info-multi="0" data-bc-schema-info-word="58"
+                        data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text">
+                        <basis core="dbsource" source="trust_login" name="captcha1" triggers="cms.reload1"
+                            run="atclient">
+                            <member name="code1" type="scalar" request="captcha"></member>
+                        </basis>
+                        <basis datamembername="captcha1.code1" core="print" run="atclient">
+                            <face>
+                                <script type="text/template">
 
+                        <span class="captcha-sefaresh">
+                            <img src="/@captcha@" width="88" height="44" class="captcha-sefaresh"
+                                alt="captcha" title="captcha" />
+                            <input type="hidden" name="captchaid" value="@captcha@" />
+                        </span>
+                    <img src="[##cms.cms.cdn##]/images/reload-captcha.png" class="refressh refressh1" run="atclient" bc-triggers="click" bc-name="cms.reload1" />
+                    <input type="text" class="codeinputm" name="captcha"
+                        placeholder="عبارت امنیتی روبرو را وارد فرمایید" />
+                  </script>
+                            </face>
+                        </basis>
+                    </div>
+
+                    <button class="flex py-1.5 px-2 bg-main rounded-[5px] items-center gap-x-2" type="submit" data-btn-add1 data-btn-submit="">
+                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 1.5V9M5 3L3 1L1 3" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            
+                        <span class="font-Ravi400 text-xs text-white"> ارسال فرم </span>
+                    </button>
+                </div>
             </form>
+            <label for="file-input" class="innerLableFile py-1.5 px-2 rounded-[5px] bg-main flex items-center gap-x-2">
+                <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 6.64114V7.92857C1 8.08012 1.0602 8.22547 1.16737 8.33263C1.27453 8.4398 1.41988 8.5 1.57143 8.5H8.42857C8.58012 8.5 8.72547 8.4398 8.83263 8.33263C8.9398 8.22547 9 8.08012 9 7.92857V6.64114M5 1V6M7 2.5L5 0.5L3 2.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    
+                <span class="text-white font-Ravi400 text-xs">
+                    آپلود فایل
+                </span>
+                </label>
         </div>
     </div>
 
@@ -657,6 +712,92 @@
     <script src="[##cms.cms.cdn##]/js/swiped-events.min.js"></script>
     <script src="[##cms.cms.cdn##]/_js/playVideo.js"></script>
     <script src="[##cms.cms.cdn##]/js/contactUs-mobile.js"></script>
+
+    <script>
+
+        let homeForm1 =document.querySelector(".homeForm1")
+        function onSource1(args) {
+            console.log("onSource");
+            const captcha = document.querySelector(
+                ".homeForm1 #requestBox input[name='captcha']"
+            ).value;
+            const captchaid = document.querySelector(
+                ".homeForm1 #requestBox input[name='captchaid']"
+            ).value;
+            const stringJson = JSON.stringify(args.source?.rows[0]);
+            console.log("stringJson", stringJson);
+            $bc.setSource("edit.object1", {
+                value: stringJson,
+                captcha: captcha,
+                captchaid: captchaid,
+            });
+        }
+
+        let responsMsg = document.querySelector(".responsMsg1");
+        let responsMsgIn = document.querySelector(".responsMsg1 span");
+
+        async function OnProcessedEditObject1(args) {
+            console.log("OnProcessedEditObject1");
+            const response = args.response;
+            const json = await response.json();
+
+            if (json.errorid == 6) {
+                console.log(json);
+                responsMsgIn.innerHTML = "فرم با موفقیت ثبت شد.";
+                responsMsg.style.display = "block";
+                homeForm1.reset();
+                setTimeout(() => {
+                    responsMsg.style.display = "none";
+                }, 2000);
+            }
+            if (json.errorid == 4) {
+                console.log(json);
+                responsMsgIn.innerHTML = "لطفا کپچا را به درستی وارد کنید.";
+
+                responsMsg.style.display = "block";
+
+                setTimeout(() => {
+                    responsMsg.style.display = "none";
+                }, 2000);
+            }
+        }
+
+        function renderFn1(params) {
+            let questions = document.querySelectorAll(
+                ".homeForm1 div[data-bc-question]"
+            );
+            questions.forEach((element) => {
+                let title = element.querySelector(
+                    ".homeForm1 [data-bc-question-title]"
+                );
+                let qInput = element.querySelector(".homeForm1 input");
+                let qTxtArea = element.querySelector(".homeForm1 _textarea");
+                if (title) {
+                    title = element.querySelector(
+                        ".homeForm1 [data-bc-question-title]"
+                    ).innerHTML;
+                    if (qInput) {
+                        qInput.setAttribute("placeholder", title);
+                    } else if (qTxtArea) {
+                        qTxtArea.setAttribute("placeholder", title);
+                    }
+                }
+                console.log("q", qInput);
+            });
+       
+       
+       
+
+
+            let selectFileBtn = document.querySelector('.homeForm1 input[type=file]');
+            
+            selectFileBtn.setAttribute("name", "file-input");
+            let innerLableFile = document.querySelector(".innerLableFile");
+            selectFileBtn.parentElement.insertAdjacentElement("beforeend", innerLableFile)
+           
+        }
+
+    </script>
 </body>
 
 </html>
