@@ -5,6 +5,13 @@ $('.Home-mobile').imagesLoaded( {
     $(document).ready(function() {
              
 const lenis = new Lenis();
+  
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
 setTimeout(()=>{
     lenis.scrollTo(0,0);
   
@@ -17,13 +24,7 @@ setTimeout(()=>{
     opacity:0,
     duration:.5
     })
-  
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-  
-  requestAnimationFrame(raf); 
+ 
 gsap.to(".Loading-Container svg", {
   opacity: 0,
   delay: 2,
@@ -201,7 +202,7 @@ let slideinner = document.querySelector(".Section-3");
                 speed:5000,
                 effect:'fade' ,
                 autoplay:{
-                    delay:2000
+                    delay:0
                 },
                 pagination: {
                     el: '.Section-1 .swiper-pagination',

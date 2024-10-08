@@ -1201,6 +1201,10 @@ video {
   height: 60%;
 }
 
+.h-\[67\%\] {
+  height: 67%;
+}
+
 .h-\[70\%\] {
   height: 70%;
 }
@@ -1227,6 +1231,10 @@ video {
 
 .h-\[90vh\] {
   height: 90vh;
+}
+
+.h-\[92vh\] {
+  height: 92vh;
 }
 
 .h-\[95vh\] {
@@ -1263,6 +1271,10 @@ video {
 
 .min-h-screen {
   min-height: 100vh;
+}
+
+.min-h-\[58\%\] {
+  min-height: 58%;
 }
 
 .w-0 {
@@ -1311,6 +1323,10 @@ video {
 
 .w-\[80\%\] {
   width: 80%;
+}
+
+.w-\[83\%\] {
+  width: 83%;
 }
 
 .w-\[85\%\] {
@@ -1405,6 +1421,16 @@ video {
 
 .origin-top {
   transform-origin: top;
+}
+
+.translate-x-\[-3px\] {
+  --tw-translate-x: -3px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-x-\[-5px\] {
+  --tw-translate-x: -5px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .-translate-y-\[150\%\] {
@@ -2000,6 +2026,10 @@ video {
 
 .gap-\[3px\] {
   gap: 3px;
+}
+
+.gap-\[5px\] {
+  gap: 5px;
 }
 
 .gap-x-1 {
@@ -5059,7 +5089,7 @@ img.capcha{
 }
 
 .main-container.SEND {
-  left: 50%;
+  left: 34%;
 }
 
 .schemaBtn{
