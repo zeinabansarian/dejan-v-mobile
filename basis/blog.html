@@ -1,0 +1,118 @@
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" > 
+    <member request="cat" type="tree" name="blogFilter" parentid="210327" /> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="210327"> 
+    <member name="mblog" type="list" perpage="100" size="300x300"/> 
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بلاگ</title>
+    <meta name="description" content="بلاگ">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputMobile.css">
+</head>
+<body>
+    <main class="blog-mobile flex flex-col" dir="rtl">
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
+        <div class="Article-container mt-[8em] w-full flex flex-col">
+            <div class="Top w-[90%]  mx-auto flex justify-start flex-col items-start gap-5">
+                <div class="Title w-auto flex flex-col  justify-start items-start">
+                    <h1 class="font-Ravi500 font-medium text-sm leading-21.17 text-dark">
+                        آخرین مطالب
+                    </h1>
+                </div>
+                <div class="Filters w-auto flex justify-start items-start gap-3">
+                    <basis core="print" datamembername="db.blogFilter">
+                        <layout>
+                            @child
+                        </layout>
+                        <face filter="catid=210327">
+                            <span class="Filteritem w-auto flex justify-start items-start" data-catid="@catid">
+                                <div class="Btn w-auto flex justify-start items-start ml-auto">
+                                    <span  class="ShowBTN w-max px-[.8em] group/btn rounded-[5px] hover:cursor-pointer
+                                     hover:bg-main hover:border-[transparent] duration-[.5s] border-dark2 border-[1px]
+                                     py-[.4em] [&.active]:bg-main flex [&.active]:border-[transparent] justify-center items-center gap-2">
+                                     
+                                        <span class="Icon hidden w-[15px] duration-[.5s] rotate-[45deg]
+                                         group-hover/btn:flex justify-center items-center  group-[&.active]/btn:flex">
+                                            <svg class="w-full h-full" width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 4.5H9M5 0.5V8.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                
+                                        </span>
+                                        <span class="Text w-max font-Ravi400 font-normal text-[10px] group-hover/btn:text-white
+                                        group-[&.active]/btn:text-white text-dark2 leading-15.05">
+                                        همه‌ی مطالب
+                                        </span>
+                                    </span>
+                                </div>
+                            </span>
+                        </face>
+                    </basis>
+                    <basis core="print" datamembername="db.blogFilter">
+                        <layout>
+                            @child
+                        </layout>
+                        <face filter="catid in (210335,210334)">
+                            <span class="Filteritem w-auto flex justify-start items-start" data-catid="@catid">
+                                <div class="Btn w-auto flex justify-start items-start ml-auto">
+                                    <span  class="ShowBTN w-max px-[.8em] group/btn rounded-[5px] hover:cursor-pointer
+                                     hover:bg-main hover:border-[transparent] duration-[.5s] border-dark2 border-[1px]
+                                     py-[.4em] [&.active]:bg-main flex [&.active]:border-[transparent] justify-center items-center gap-2">
+                                     
+                                        <span class="Icon hidden w-[15px] duration-[.5s] rotate-[45deg]
+                                         group-hover/btn:flex justify-center items-center  group-[&.active]/btn:flex">
+                                            <svg class="w-full h-full" width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 4.5H9M5 0.5V8.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                
+                                        </span>
+                                        <span class="Text w-max font-Ravi400 font-normal text-[10px] group-hover/btn:text-white
+                                        group-[&.active]/btn:text-white text-dark2 leading-15.05">
+                                        @title
+                                        </span>
+                                    </span>
+                                </div>
+                            </span>
+                        </face>
+                    </basis>
+
+                </div>
+            </div>
+            <div class="Bottom w-full flex mb-[4em]">
+                <div class="Articles w-[90%] mt-[2.5em] mx-auto flex gap-5 justify-start items-start flex-col">
+                    <basis core="print" datamembername="db.mblog">
+                        <layout>
+                            @child
+                        </layout>
+                        <face>
+                            <a alt="@title" title="@title" href="@link" class="Blog opacity-0
+                             group w-full h-full flex relative  duration-[1s] hover:scale-[.93]">
+                                <div class="IMG w-full h-full flex justify-center items-center">
+                                    <img src="@00300x00300prp" alt="@title" title="@title" class=" w-full h-full duration-[.5s]
+                                     filter grayscale-[1] object-cover group-hover:grayscale-[0]">
+                                </div>
+                                <div class="OV absolute left-0 bottom-0 w-full h-full z-1 flex justify-start items-end">
+                                    <div class="Title w-auto mr-[1em] mb-[1em]">
+                                        <p class="font-Ravi500 font-medium text-[12px] 
+                                        duration-[.5s] group-hover:translate-x-[-1em]
+                                         leading-18.6 text-white group-hover:translate-y-[-.8em]">
+                                          @title
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </face>
+                    </basis>
+                </div>
+            </div>
+            <basis core="call" file="footer1.inc" pageindex="[##cms.cms.pageindex##]" />
+        </div>
+    </main>
+<basis core="call" file="script-mobile.inc" />
+<script src="[##cms.cms.cdn##]/js/blog-Mobile.js"></script>
+</body>
+</html>

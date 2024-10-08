@@ -1,0 +1,95 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" catid="210353" q="[##cms.query.q##]"> 
+    <member name="listproj" type="list"  size="360x580" propertyid="7244,7246,7248,7249"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="210327" q="[##cms.query.q##]"> 
+    <member name="mblog" type="list" perpage="100" size="300x300"/> 
+</basis>
+<div class="Section-1 w-[90%] mx-auto flex flex-col mb-[1.5em] mt-[1.5em]">
+    <basis core="group" if="'[##db.listproj.RowNumber##]' = '' and
+    '[##db.mblog.RowNumber##]' = ''"> 
+
+    <div class="NoRes relative w-full mt-[3em] mx-auto flex flex-col gap-6">
+        <p class="font-Ravi500 font-medium text-lg leading-27.09 text-dark">
+            جست و جو بی نتیجه ماند!
+        </p>
+        <p class="font-Ravi400 text-[13px] font-normal leading-21 text-dark">
+            املای کلمه‌ی مورد نظر را بررسی کرده و مجددا برای جست و جو اقدام کنید.
+        </p>
+        </div>
+ 
+    </basis>
+    </div>
+    <basis core="print" datamembername="db.listproj">
+        <layout>
+            <div class="Section-2 sec w-[90%] flex flex-col mx-auto mb-[1.5em] mt-[2.5em]">
+                <div class="Titles w-full mx-auto flex flex-col mb-[.8em]">
+                    <div class="Title-1 titleB  w-full ml-auto flex justify-start items-center
+                    pb-[.5em] relative ">
+                    <h2 class="font-Ravi500 font-normal text-lg leading-27.09 text-dark">
+                        پروژه‌ها
+                    </h2>
+                    </div>
+            </div>
+            <div class="projects flex w-full mx-auto flex-col mb-[2em]" >
+            @child
+            </div>
+            </div>
+        </layout>
+       <face>
+        <div class="project w-full  flex flex-col  py-[.8em]">
+        <a  href="@link"  alt="@title " title="@title" class="w-full flex flex-col">
+   
+           <div class="Title w-full
+            flex justify-start items-center relative">
+            <h3 class="font-Ravi500 font-medium  mx-0 my-0
+            text-base leading-24.18 text-dark text-right">
+                 @title
+               </h3>
+           </div>
+           <div class="Text w-full flex flex-col justify-start items-start">
+            <p class="font-Ravi400 font-normal text-[13px] leading-21 text-dark text-justify">
+             @prp_7244
+            </p>
+           </div>
+         
+        </a>
+         
+</div>
+       </face>
+    </basis>
+    <basis core="print" datamembername="db.mblog">
+        <layout>
+            <div class="Section-3 sec w-[90%] flex flex-col mx-auto mb-[1.5em] mt-[2.5em]">
+                <div class="Titles w-full mx-auto flex flex-col mb-[.8em]">
+                    <div class="Title-1 titleB  w-full ml-auto flex justify-start items-center
+                    pb-[.5em] relative ">
+                    <h3 class="font-Ravi500 font-normal text-lg leading-27.09 text-dark">
+                        مقاله‌ها
+                    </h3>
+                    </div>
+            </div>
+            <div class="blogs flex w-full mx-auto flex-col mb-[2em]" >
+            @child
+            </div>
+            </div>
+        </layout>
+        <face>
+            <div class="articBox w-full flex flex-col">
+                <div class="title mt-4 w-full flex flex-col gap-3">
+                    <a  href="@link"  alt="@title " title="@title">
+
+                        <h5 class="font-Ravi500 mb-4 text-base font-medium leading-24.18 text-dark">
+                          @title
+                        </h5>
+                    </a>
+                    <div class="para mb-4 font-Ravi400 font-normal text-[13px] leading-21 text-dark">
+                        <p>
+                            @prp_7244   </p>
+                    </div>
+
+            
+                </div>
+            </div>
+        </face>
+    </basis>
+ 
