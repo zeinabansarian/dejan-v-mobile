@@ -39,7 +39,7 @@
 </head>
 <body>
     <main class="Home-mobile flex flex-col overflow-hidden" dir="rtl">
-        <div class="Loading-Container w-full h-screen fixed top-0 left-0
+        <div class="Loading-Container w-full  h-[100svh] fixed top-0 left-0
          z-[999999] bg-white flex justify-center items-center">
             <div class="logo">
                 <svg width="120" height="83" viewBox="0 0 120 83" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -70,14 +70,14 @@
             </div>
         </div>
         <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
-        <div class="swiper-Container w-full flex overflow-hidden h-screen">
-            <div class="swiper-wrapper w-full h-full">
-                <div class="swiper-slide relative h-full overflow-hidden Section-1 w-full flex justify-center items-center">  
+        <div class="swiper-Container w-full flex overflow-hidden h-[100svh]">
+            <div class="swiper-wrapper w-full  h-[100svh]">
+                <div class="swiper-slide relative  h-[100svh] overflow-hidden Section-1 w-full flex justify-center items-center">  
                     <div class="slide-inner absolute left-0 top-0 bottom-0 overflow-hidden
                     w-full h-full flex justify-center items-center">
                         <div class="Banner-Slider h-full w-full justify-center items-center">
-                            <div class="swiper-banner h-full w-full flex overflow-hidden">
-                                <div class="swiper-wrapper w-full h-full">
+                            <div class="swiper-banner  h-[100svh] w-full flex overflow-hidden">
+                                <div class="swiper-wrapper w-full  h-[100svh]">
                                     <basis core="repeater" name="rep" datamembername="db.slider">
                                         <basis core="dbsource" name="db" source="media" lid="1" sourcemid="19" usedforid="[##rep.current.id##]"> 
                                             <member name="video" type="list" format="3"/> 
@@ -138,10 +138,10 @@
                             </div>
                         </div>
                </div> 
-               <div class="swiper-slide relative overflow-hidden h-full Section-2 w-full flex justify-center items-center">
+               <div class="swiper-slide relative overflow-hidden  h-[100svh] Section-2 w-full flex justify-center items-center">
                 <div class="Sec-2  slide-inner absolute left-0 top-0 bottom-0 overflow-hidden
                  w-full h-full flex justify-center flex-col items-center" style="background: url(../images/pattern_A_light.png);">
-              <div class="Content w-full flex flex-col justify-end h-[90vh] mt-auto">
+              <div class="Content w-full flex flex-col justify-end h-[90svh] mt-auto">
                 <div class="Right  w-full h-auto flex justify-center items-center">
                     <div class=" h-full w-full flex flex-col justify-center items-center">
                        <div class="Title-1 relative z-3 w-[85%] mx-auto flex justify-start items-start">
@@ -216,10 +216,10 @@
               
              </div>
              <div class="swiper-slide relative proj
-              overflow-hidden h-full proj-Section-1 w-full flex justify-center items-center">
+              overflow-hidden  h-[100svh] proj-Section-1 w-full flex justify-center items-center">
                 <div class="proj-Sec-1 slide-inner absolute left-0 top-0 bottom-0 overflow-hidden
                 w-full h-full flex justify-center items-center">
-                <div class="Projects-Container h-[90vh] mt-auto flex-col justify-end w-full mx-auto gap-3 flex">
+                <div class="Projects-Container h-[90svh] mt-auto flex-col justify-end w-full mx-auto gap-3 flex">
                     <div class="top w-[83%] mx-auto flex h-full flex-col justify-center items-center">
                         <div class="Title-1 w-full mx-auto flex justify-start items-start mb-[.5em]">
                             <basis core="print" datamembername="db.descr-prj">
@@ -301,7 +301,7 @@
             overflow-hidden h-full proj-Section-@RowNumber w-full flex justify-center items-center">
                 <div class="proj-Sec-@RowNumber slide-inner absolute left-0 top-0 bottom-0 overflow-hidden
                 w-full h-full flex justify-center items-center">
-                <div class="Projects-Container h-[90vh] mt-auto flex-col justify-end w-full mx-auto gap-3 flex">
+                <div class="Projects-Container h-[90svh] mt-auto flex-col justify-end w-full mx-auto gap-3 flex">
               
                   <div class="bottom  w-full h-[85%] my-auto flex">
                     <a href="@link" title="@title" alt="@title" class="Project w-full h-full before:content-[''] before:absolute
@@ -333,7 +333,7 @@
              h-full blog-Section-1 w-full flex justify-center items-center">
                 <div class="blog-Sec-1 slide-inner absolute left-0 top-0 bottom-0 overflow-hidden bg-dark
                 w-full h-full flex justify-center items-center">
-                <div class="Blogs-Container w-[90%] mt-auto mx-auto h-[90vh] flex gap-4">
+                <div class="Blogs-Container w-[90%] mt-auto mx-auto h-[90svh] flex gap-4">
                     <div class="Right w-[90%] mx-auto h-full mb-auto mt-auto 
                      gap-2 flex flex-col justify-start items-start">
                         <div class="Top w-full flex flex-col">
@@ -416,7 +416,7 @@
             h-full blog-Section-@RowNumber w-full flex justify-center items-center">
                <div class="blog-Sec-@RowNumber slide-inner absolute left-0 top-0 bottom-0 overflow-hidden bg-dark
                w-full h-full flex justify-center items-center">
-               <div class="Blogs-Container w-[90%] mt-auto mx-auto h-[90vh] flex gap-4">
+               <div class="Blogs-Container w-[90%] mt-auto mx-auto h-[90svh] flex gap-4">
                    <div class="Right w-[90%] mx-auto h-full mb-auto mt-auto 
                     gap-2 flex flex-col justify-start items-start">
                        <div class="Bottom w-full h-[75%] mt-auto flex-col
