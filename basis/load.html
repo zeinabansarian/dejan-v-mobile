@@ -1,8 +1,8 @@
 <basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" catid="210353" q="[##cms.query.q##]"> 
-    <member name="listproj" type="list"  size="360x580" propertyid="7244,7246,7248,7249"/> 
+    <member name="listproj" type="list"  size="360x580" propertyid="7244,7246,7248,7249,91220"/> 
 </basis>
 <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="210327" q="[##cms.query.q##]"> 
-    <member name="mblog" type="list" perpage="100" size="300x300"/> 
+    <member name="mblog" type="list" perpage="100" size="300x300" propertyid="7244,7246,7248,7249"/> 
 </basis>
 <div class="Section-1 w-[90%] mx-auto flex flex-col mb-[1.5em] mt-[1.5em]">
     <basis core="group" if="'[##db.listproj.RowNumber##]' = '' and
@@ -37,7 +37,7 @@
         </layout>
        <face>
         <div class="project w-full  flex flex-col  py-[.8em]">
-        <a  href="@link"  alt="@title " title="@title" class="w-full flex flex-col">
+        <a  href="@link"  alt="@title " title="@title" class="w-full gap-[1em] flex flex-col">
    
            <div class="Title w-full
             flex justify-start items-center relative">
@@ -48,7 +48,7 @@
            </div>
            <div class="Text w-full flex flex-col justify-start items-start">
             <p class="font-Ravi400 font-normal text-[13px] leading-21 text-dark text-justify">
-             @prp_7244
+             @prp_91220
             </p>
            </div>
          
@@ -75,7 +75,7 @@
         </layout>
         <face>
             <div class="articBox w-full flex flex-col">
-                <div class="title mt-4 w-full flex flex-col gap-3">
+                <div class="title mt-4 w-full flex flex-col gap-[1em]">
                     <a  href="@link"  alt="@title " title="@title">
 
                         <h5 class="font-Ravi500 mb-4 text-base font-medium leading-24.18 text-dark">
@@ -84,7 +84,7 @@
                     </a>
                     <div class="para mb-4 font-Ravi400 font-normal text-[13px] leading-21 text-dark">
                         <p>
-                            @prp_7244   </p>
+                            @prp_7246   </p>
                     </div>
 
             

@@ -1,19 +1,22 @@
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2362515"> 
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]"> 
     <member name="article" type="view"/> 
 </basis>
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2362515"> 
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]"> 
     <member name="title" type="view" postsql="select * from [db.title] where TypeID=150"/> 
 </basis>
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2362515"> 
-    <member name="det" type="view" postsql="select * from [db.det] where TypeID=128"/> 
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]"> 
+    <member name="det" type="view" postsql="select * from [db.det] where prpID=7248"/> 
 </basis>
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2362515"> 
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]"> 
+    <member name="date" type="view" postsql="select * from [db.date] where prpID=7249"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]"> 
     <member name="text" type="view" postsql="select * from [db.text] where TypeID=250"/> 
 </basis>
-<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2362515"> 
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="[##cms.query.id##]"> 
     <member name="articleGallery" type="list" format="4"/> 
 </basis>
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2362515"> 
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]"> 
     <member name="related-project" type="list" blgid="1611" size="360x580"/> 
 </basis>	    
 <basis core="dbsource" source="basiscore" name="json" lid="1" usedforid="[##cms.query.id##]" > 
@@ -46,26 +49,26 @@
                     </h1>
                 </div>
                <div class="Det w-[90%]  mx-auto flex justify-between items-start gap-3">
-                <div class="Right w-[50%] flex flex-col items-start justify-start">
+                <div class="Right w-[50%] flex gap-[1em] items-start justify-start">
                     <span class="Author w-auto flex justify-center 
                     items-center font-Ravi400 font-normal text-[10px] leading-15.05 text-dark">
                     نویسنده: <basis core="print" datamembername="db.det">
                         <layout>
                             @child
                         </layout>
-                        <face filter="RowNumber=1">
-                            @largetext
+                        <face>
+                            @text
                         </face>
                     </basis>
                     </span>
-                    <span class="Date w-auto flex justify-center font-Ravi400 font-normal text-[10px] leading-15.05 text-dark
+                    <span class="faNum Date w-auto flex justify-center font-Ravi400 font-normal text-[10px] leading-15.05 text-dark
                     items-center">
-                    <basis core="print" datamembername="db.det">
+                    <basis core="print" datamembername="db.date">
                         <layout>
                             @child
                         </layout>
-                        <face filter="RowNumber=2">
-                            @largetext
+                        <face>
+                          @text
                         </face>
                     </basis>
                     </span>

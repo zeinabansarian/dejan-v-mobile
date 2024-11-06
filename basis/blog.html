@@ -56,7 +56,7 @@
                         <layout>
                             @child
                         </layout>
-                        <face filter="catid in (210335,210334)">
+                        <face filter="catid in (210335)">
                             <span class="Filteritem w-auto flex justify-start items-start" data-catid="@catid">
                                 <div class="Btn w-auto flex justify-start items-start ml-auto">
                                     <span  class="ShowBTN w-max px-[.8em] group/btn rounded-[5px] hover:cursor-pointer
@@ -79,6 +79,34 @@
                             </span>
                         </face>
                     </basis>
+                    <basis core="print" datamembername="db.blogFilter">
+                        <layout>
+                            @child
+                        </layout>
+                        <face filter="catid in (210334)">
+                            <span class="Filteritem w-auto flex justify-start items-start" data-catid="@catid">
+                                <div class="Btn w-auto flex justify-start items-start ml-auto">
+                                    <span  class="ShowBTN w-max px-[.8em] group/btn rounded-[5px] hover:cursor-pointer
+                                     hover:bg-main hover:border-[transparent] duration-[.5s] border-dark2 border-[1px]
+                                     py-[.4em] [&.active]:bg-main flex [&.active]:border-[transparent] justify-center items-center gap-2">
+                                     
+                                        <span class="Icon hidden w-[15px] duration-[.5s] rotate-[45deg]
+                                         group-hover/btn:flex justify-center items-center  group-[&.active]/btn:flex">
+                                            <svg class="w-full h-full" width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 4.5H9M5 0.5V8.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                
+                                        </span>
+                                        <span class="Text w-max font-Ravi400 font-normal text-[10px] group-hover/btn:text-white
+                                        group-[&.active]/btn:text-white text-dark2 leading-15.05">
+                                        @title
+                                        </span>
+                                    </span>
+                                </div>
+                            </span>
+                        </face>
+                    </basis>
+                
 
                 </div>
             </div>
@@ -89,13 +117,13 @@
                             @child
                         </layout>
                         <face>
-                            <a alt="@title" title="@title" href="@link" class="Blog opacity-0
+                            <a alt="@title" title="@title" href="@link" class="Blog opacity-0 rounded-[3px]
                              group w-full h-full flex relative  duration-[1s] hover:scale-[.93]">
-                                <div class="IMG w-full h-full flex justify-center items-center">
-                                    <img src="@00300x00300prp" alt="@title" title="@title" class=" w-full h-full duration-[.5s]
+                                <div class="IMG w-full h-full flex justify-center items-center rounded-[3px]">
+                                    <img src="@00300x00300prp" alt="@title" title="@title" class=" w-full rounded-[3px] h-full duration-[.5s]
                                      filter grayscale-[1] object-cover group-hover:grayscale-[0]">
                                 </div>
-                                <div class="OV absolute left-0 bottom-0 w-full h-full z-1 flex justify-start items-end">
+                                <div class="OV absolute left-0 rounded-[3px] bottom-0 w-full h-full z-1 flex justify-start items-end">
                                     <div class="Title w-auto mr-[1em] mb-[1em]">
                                         <p class="font-Ravi500 font-medium text-[12px] 
                                         duration-[.5s] group-hover:translate-x-[-1em]

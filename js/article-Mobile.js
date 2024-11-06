@@ -12,20 +12,20 @@ header.classList.add('darkLogo')
   }
   
   requestAnimationFrame(raf)
-  lenis.on('scroll',(e)=>{
-  if(e.scroll > 0){
-    header.classList.add('Gobottom')
-    header.classList.remove('dark')
-    header.classList.remove('darkLogo')
+//   lenis.on('scroll',(e)=>{
+//   if(e.scroll > 0){
+//     header.classList.add('Gobottom')
+//     header.classList.remove('dark')
+//     header.classList.remove('darkLogo')
 
-  }
-  else{
-    header.classList.remove('Gobottom')
-    header.classList.add('dark')
-header.classList.add('darkLogo')
-  }
+//   }
+//   else{
+//     header.classList.remove('Gobottom')
+//     header.classList.add('dark')
+// header.classList.add('darkLogo')
+//   }
   
-  })
+//   })
 document.querySelectorAll('.sharee').forEach(btn => {
   btn.addEventListener('click', e => {
     e.target.parentElement.classList.toggle('share__wrapper--active');
@@ -42,5 +42,28 @@ document.querySelectorAll('.sharee').forEach(btn => {
  let url = window.location.href 
   whatsapp.setAttribute('href',`https://api.whatsapp.com/send?text=${proLink}`)
   instagram.setAttribute('href',`https://www.instagram.com/?url=${proLink}`)
-  twitter.setAttribute('href',`"https://twitter.com/intent/tweet?url=${proLink}`)
+  twitter.setAttribute('href',`https://twitter.com/intent/tweet?url=${proLink}`)
 
+  function add(){
+    console.log('enter');
+    
+    document.querySelector('header').classList.remove('dark')
+    document.querySelector('header').classList.remove('darkLogo')
+  }
+  function remove(){
+    console.log('leave');
+    document.querySelector('header').classList.add('dark')
+    document.querySelector('header').classList.add('darkLogo')
+  }
+  gsap.to('footer',{
+  
+    scrollTrigger:{
+      trigger:'footer',
+      start:'top top',
+      end:'bottom bottom',
+      onEnter: () =>add(),
+      onEnterBack: () =>remove(),
+      onLeave: () => add(),
+      onLeaveBack: () =>remove(),
+    }
+  })

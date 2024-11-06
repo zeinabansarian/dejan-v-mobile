@@ -14,20 +14,20 @@
 <footer class="MobileFooter  w-full flex justify-center items-center">
     <div class="footer w-full flex flex-col justify-center items-center">
         <div class="Top w-full  flex justify-start items-start">
-            <div class="Map-Container min-h-screen relative  w-full flex flex-col justify-center items-center">
+            <div class="Map-Container  relative  w-full flex flex-col justify-center items-center">
                 <div class="bg-1 bgsec w-full mx-auto relative z-2" 
                 style="background-image: url('/images/footer-mobile.jpg ');background-size: cover;">
                     <div class="bg-2  h-full BGSection2 w-full mx-auto" >
                         <div class="OverBox relative z-10 mt-[2em] flex flex-col h-full
                 w-[83%]  mx-auto ">
                <div class="Right w-full flex justify-center items-start flex-col gap-2">
-                    <div class="Title w-full flex justify-start items-start">
+                    <div class="Title mb-[1em] w-full flex justify-start items-start">
                         <p class="font-Ravi500 font-medium text-sm leading-21.17 text-white">
                             اطلاعات تماس
                         </p>
                     </div>
 
-                    <div class="Details w-full flex flex-col gap-2">
+                    <div class="Details w-full flex flex-col gap-[.8em]">
                         <basis core="print" datamembername="db.contactus">
                             <layout>
                                 @child
@@ -212,7 +212,7 @@
                         </basis>
                       </div>
                     </div>
-                    <div class="Middle w-full min-h-[30vh] flex justify-center items-center">
+                    <div class="Middle w-full min-h-[300px] flex justify-center items-center">
                         <div class="PointerBox w-full flex flex-col justify-center items-center gap-1">
                             <div class="Pointer w-auto flex justify-center items-center hover:cursor-pointer">
                                 <svg width="26" height="37" viewBox="0 0 26 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -320,23 +320,38 @@
 <div class="main-container">
     <span></span>
 </div>
-<div class="MapPOP w-full flex justify-center items-center
+<div
+class="MapPOP w-full flex justify-center items-center
 fixed z-[9999] bg-[#2626276a] h-full top-0 left-0 duration-100 pointer-events-none opacity-0 [&.open]:pointer-events-auto [&.open]:opacity-[1]">
 <div class="Box w-[300px] h-[300px] grid grid-cols-[1fr,1fr] grid-rows-[1fr,1fr] 
- bg-white justify-center items-center relative">
- <span class="Closemap absolute right-[1em] top-[1em] hover:cursor-pointer ">
-    <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2 1L16 15M2 15L16 1" stroke="#48494A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+bg-white justify-center items-center relative">
+    <span class="Closemap absolute right-[1em] top-[1em] hover:cursor-pointer ">
+        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 1L16 15M2 15L16 1" stroke="#48494A" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
         </svg>
-        
- </span>
-    <a href="https://osm.org/go/zSTUh_ND4" class="Link googlemap w-full text-center font-Ravi700 text-base text-dark">
-    گوگل مپ
+
+    </span>
+    <a href="https://osm.org/go/zSTUh_ND4"
+        class="Link googlemap w-full text-center font-Ravi700 text-base text-dark">
+        <div class="icon text-center flex items-center justify-center">
+            <img style="width: 40px;margin-bottom: 10px;" src="images/googlemap.png" alt=" گوگل مپ">
+        </div>
+        گوگل مپ
     </a>
-    <a href="https://nshn.ir/_bv7OuVxOYgo" class="Link neshan w-full text-center font-Ravi700 text-base text-dark">
+    <a href="https://nshn.ir/_bv7OuVxOYgo"
+        class="Link neshan w-full text-center font-Ravi700 text-base text-dark">
+        <div class="icon text-center flex items-center justify-center">
+            <img style="width: 40px;margin-bottom: 10px;" src="images/neshan.png" alt="نشان">
+        </div>
         نشان
     </a>
-    <a href="https://balad.ir/p/18nEIeo8JyfoW9" class="Link balad w-full text-center font-Ravi700 text-base text-dark">
+    <a href="https://balad.ir/p/18nEIeo8JyfoW9"
+        class="Link balad w-full text-center font-Ravi700 text-base text-dark">
+        <div class="icon text-center flex items-center justify-center">
+            <img style="width: 40px;margin-bottom: 10px;" src="images/balad.png" alt="نشان">
+              
+        </div>
         بلد
     </a>
 </div>

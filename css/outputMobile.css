@@ -1209,10 +1209,6 @@ video {
   height: 60%;
 }
 
-.h-\[70\%\] {
-  height: 70%;
-}
-
 .h-\[75\%\] {
   height: 75%;
 }
@@ -1223,10 +1219,6 @@ video {
 
 .h-\[85\%\] {
   height: 85%;
-}
-
-.h-\[87vh\] {
-  height: 87vh;
 }
 
 .h-\[90\%\] {
@@ -1263,6 +1255,10 @@ video {
 
 .max-h-\[515px\] {
   max-height: 515px;
+}
+
+.min-h-\[300px\] {
+  min-height: 300px;
 }
 
 .min-h-\[30vh\] {
@@ -2020,12 +2016,24 @@ video {
   gap: 1.75rem;
 }
 
+.gap-\[\.8em\] {
+  gap: .8em;
+}
+
 .gap-\[0\.5em\] {
   gap: 0.5em;
 }
 
+.gap-\[1em\] {
+  gap: 1em;
+}
+
 .gap-\[2\.8em\] {
   gap: 2.8em;
+}
+
+.gap-\[2em\] {
+  gap: 2em;
 }
 
 .gap-\[3px\] {
@@ -4131,11 +4139,21 @@ ul,li,p,h1,h2,h3,h4,h5,h6{
   -o-transform: rotate(45deg);
   position: relative;
   overflow: hidden;
+  transition: all .8s ease;
+  -webkit-transition: all .8s ease;
+  -moz-transition: all .8s ease;
+  -ms-transition: all .8s ease;
+  -o-transition: all .8s ease;
 }
 
 .Home-mobile .swiper-Container > .swiper-pagination .swiper-pagination-bullet{
   width: 20px;
   height: 20px;
+  transition: all .8s ease;
+  -webkit-transition: all .8s ease;
+  -moz-transition: all .8s ease;
+  -ms-transition: all .8s ease;
+  -o-transition: all .8s ease;
 }
 
 .Home-mobile .swiper-Container > .swiper-pagination .swiper-pagination-bullet svg{
@@ -4151,11 +4169,11 @@ ul,li,p,h1,h2,h3,h4,h5,h6{
   width: 20px;
   height: 20px;
   z-index: 2;
-  transition: all 15s ease;
-  -webkit-transition: all 15s ease;
-  -moz-transition: all 15s ease;
-  -ms-transition: all 15s ease;
-  -o-transition: all 15s ease;
+  transition: all .8s ease;
+  -webkit-transition: all .8s ease;
+  -moz-transition: all .8s ease;
+  -ms-transition: all .8s ease;
+  -o-transition: all .8s ease;
   transform:rotate(-45deg) translate(-50%, 0);
   -webkit-transform:rotate(-45deg) translate(-50%, 0);
   -moz-transform:rotate(-45deg) translate(-50%, 0);
@@ -4181,15 +4199,13 @@ ul,li,p,h1,h2,h3,h4,h5,h6{
   position: absolute;
   background-color: #8F993C;
   z-index: 2;
-  animation: change-height;
-  -webkit-animation: change-height;
-  animation-duration: 15s !important;
-  transform-origin: center;
-  transition: all 15s ease;
-  -webkit-transition: all 15s ease;
-  -moz-transition: all 15s ease;
-  -ms-transition: all 15s ease;
-  -o-transition: all 15s ease;
+  animation: change-height 20s;
+  -webkit-animation: change-height 20s;
+  transition: all 20s ease;
+  -webkit-transition: all 20s ease;
+  -moz-transition: all 20s ease;
+  -ms-transition: all 20s ease;
+  -o-transition: all 20s ease;
 }
 
 .Home-mobile .Section-1 .swiper-pagination .swiper-pagination-bullet-active{
@@ -4247,7 +4263,8 @@ ul,li,p,h1,h2,h3,h4,h5,h6{
 }
 
 .BGSection2{
-  background: url('../images/pattern_A_light.png');
+  background: url('../images/bg-pattern.png');
+  /* background: url('../images/pattern_A_light.png'); */
   background-repeat: repeat;
   position: relative;
   z-index: 5;
@@ -4336,25 +4353,37 @@ header .searchs svg path{
   stroke: #262627;
 }
 
-/* header.dark .searchs.OpenS svg path{
-stroke: #262627;
+header.dark .searchs.OpenS svg path{
+  stroke: #262627;
 }
+
 header .searchs.OpenS svg path{
   stroke: white;
-  }
+}
+
+header.dark .header-inner .InputBox input[type="text"]::-moz-placeholder{
+  color: #262627 !important;
+}
+
 header.dark .header-inner .InputBox input[type="text"]::placeholder{
   color: #262627 !important;
 }
+
 header.dark .header-inner .InputBox input[type="text"]{
   border-bottom:  1px solid #262627 !important;
 }
+
 header .header-inner .InputBox input[type="text"]{
   border-bottom:  1px solid white !important;
 }
+
+header .header-inner .InputBox input[type="text"]::-moz-placeholder{
+  color: white !important;
+}
+
 header .header-inner .InputBox input[type="text"]::placeholder{
- 
-color: white !important;
-} */
+  color: white !important;
+}
 
 .header-inner .InputBox input[type="text"]:focus-visible,
 .header-inner .InputBox input[type="text"]:focus,
@@ -4869,7 +4898,16 @@ header.dark .searchIconHeader svg path{
 }
 
 .Form-Container option {
-  background-color: #262627 !important;
+  background-color: #262627 ;
+}
+
+.Form-Container select option:checked,
+.Form-Container select option:hover,
+.Form-Container select option:active,
+.Form-Container select option:focus,
+.Form-Container select option:focus-visible,
+.Form-Container select option:current{
+  background-color: #8F993C !important;
 }
 
 .Form-Container [data-bc-answer-container] input[type="text"]:active,
@@ -4905,6 +4943,7 @@ header.dark .searchIconHeader svg path{
   -moz-border-radius: 0 !important;
   -ms-border-radius: 0 !important;
   -o-border-radius: 0 !important;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #8F993C;
 }
 
 .Form-Container .Box{
@@ -5277,6 +5316,91 @@ footer .Details .Row.phone .Answer:not(:last-child)::before{
   width: 130px;
 }
 
+footer{
+  position: relative;
+}
+
+footer::before{
+  content: '';
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 30px;
+  top: -1.5em;
+  background-color: #262627;
+}
+
+[data-bc-schema-info-part="1"] [data-bc-part-related-cell]{
+  width: 100%;
+  margin: 0;
+}
+
+.MobileFooter {
+  overflow: hidden;
+}
+
+.Home-mobile header::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #262627 0%, rgba(38, 38, 39, 0.75) 47.5%, rgba(38, 38, 39, 0) 100%);
+  z-index: -1;
+}
+
+main.Home-mobile .Section-2 .slide-inner::before{
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  width: 100%;
+  height: 55%;
+  background-color: #ffffffcc;
+  z-index: 1;
+}
+
+main.Home-mobile .Section-2 .Title-1,
+  main.Home-mobile .Section-2 .Title-2,
+  main.Home-mobile .Section-2 .Text,
+  main.Home-mobile .Section-2 .Btn  {
+  position: relative;
+  z-index: 5;
+}
+
+.Menu-Container::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-color: #FFFFFFBF;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+header .searchIconHeader:hover svg path{
+  stroke: #8f993c !important;
+}
+
+.Search-Container .Text p{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+footer .bgsec{
+  background-position: 50%;
+  background-origin: border-box;
+  background-position-y: -5em;
+}
+
 @media (min-width: 480px) {
   .sm\:container {
     width: 100%;
@@ -5474,6 +5598,11 @@ footer .Details .Row.phone .Answer:not(:last-child)::before{
   font-weight: 700;
 }
 
+.hover\:\!text-main:hover {
+  --tw-text-opacity: 1 !important;
+  color: rgb(143 153 60 / var(--tw-text-opacity)) !important;
+}
+
 .hover\:text-main:hover {
   --tw-text-opacity: 1;
   color: rgb(143 153 60 / var(--tw-text-opacity));
@@ -5509,6 +5638,11 @@ footer .Details .Row.phone .Answer:not(:last-child)::before{
 .group:hover .group-hover\:translate-y-\[-\.8em\] {
   --tw-translate-y: -.8em;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group\/tog:hover .group-hover\/tog\:bg-main {
+  --tw-bg-opacity: 1;
+  background-color: rgb(143 153 60 / var(--tw-bg-opacity));
 }
 
 .group\/btn:hover .group-hover\/btn\:text-white {

@@ -342,10 +342,20 @@ a {
     -o-transform: rotate(45deg);
     position: relative;
     overflow: hidden;
+    transition: all .8s ease;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
 }
 .Home-mobile .swiper-Container > .swiper-pagination .swiper-pagination-bullet{
     width: 20px;
     height: 20px;
+    transition: all .8s ease;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
 
 }
 .Home-mobile .swiper-Container > .swiper-pagination .swiper-pagination-bullet svg{
@@ -361,11 +371,11 @@ a {
     width: 20px;
     height: 20px;
     z-index: 2;
-    transition: all 15s ease;
-    -webkit-transition: all 15s ease;
-    -moz-transition: all 15s ease;
-    -ms-transition: all 15s ease;
-    -o-transition: all 15s ease;
+    transition: all .8s ease;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
     transform:rotate(-45deg) translate(-50%, 0);
     -webkit-transform:rotate(-45deg) translate(-50%, 0);
     -moz-transform:rotate(-45deg) translate(-50%, 0);
@@ -384,19 +394,17 @@ a {
     -o-transition: all .8s ease;
 }
 .Home-mobile .Section-1 .swiper-pagination .swiper-pagination-bullet-active::before{
-    content: '';
-    position: absolute;
-    background-color: #8F993C;
-    z-index: 2;
-    animation: change-height;
-    -webkit-animation: change-height;
-    animation-duration: 15s !important;
-    transform-origin: center;
-    transition: all 15s ease;
-    -webkit-transition: all 15s ease;
-    -moz-transition: all 15s ease;
-    -ms-transition: all 15s ease;
-    -o-transition: all 15s ease;
+  content: '';
+  position: absolute;
+  background-color: #8F993C;
+  z-index: 2;
+  animation: change-height 20s;
+    -webkit-animation: change-height 20s;
+    transition: all 20s ease;
+    -webkit-transition: all 20s ease;
+    -moz-transition: all 20s ease;
+    -ms-transition: all 20s ease;
+    -o-transition: all 20s ease;
 }
 .Home-mobile .Section-1 .swiper-pagination .swiper-pagination-bullet-active{
     transform:rotate(45deg) scale(1.2);
@@ -447,7 +455,8 @@ a {
     position: relative;
   }
   .BGSection2{
-    background: url('../images/pattern_A_light.png');
+    background: url('../images/bg-pattern.png');
+    /* background: url('../images/pattern_A_light.png'); */
     background-repeat: repeat;
     position: relative;
     z-index: 5;
@@ -529,7 +538,7 @@ background: #000000c9;
 header .searchs svg path{
   stroke: #262627;
   }
-/* header.dark .searchs.OpenS svg path{
+header.dark .searchs.OpenS svg path{
 stroke: #262627;
 }
 header .searchs.OpenS svg path{
@@ -547,7 +556,7 @@ header .header-inner .InputBox input[type="text"]{
 header .header-inner .InputBox input[type="text"]::placeholder{
  
 color: white !important;
-} */
+}
 .header-inner .InputBox input[type="text"]:focus-visible,
 .header-inner .InputBox input[type="text"]:focus,
 .header-inner .InputBox input[type="text"]:active{
@@ -991,7 +1000,16 @@ display: none;
   padding-right: 0 !important;
 }
 .Form-Container option {
-  background-color: #262627 !important;
+  background-color: #262627 ;
+}
+
+.Form-Container select option:checked,
+.Form-Container select option:hover,
+.Form-Container select option:active,
+.Form-Container select option:focus,
+.Form-Container select option:focus-visible,
+.Form-Container select option:current{
+  background-color: #8F993C !important;
 }
 .Form-Container [data-bc-answer-container] input[type="text"]:active,
 .Form-Container [data-bc-answer-container] input[type="password"]:active, 
@@ -1026,6 +1044,7 @@ display: none;
   -moz-border-radius: 0 !important;
   -ms-border-radius: 0 !important;
   -o-border-radius: 0 !important;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #8F993C;
 }
 
 .Form-Container .Box{
@@ -1352,3 +1371,78 @@ footer .Details .Row.phone .Answer:not(:last-child)::before{
   .formPopUp .homeForm1 fieldset:nth-child(3) [data-bc-question]:last-child {
     width: 130px;
   }
+  footer{
+    position: relative;
+  }
+  footer::before{
+    content: '';
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 30px;
+    top: -1.5em;
+    background-color: #262627;
+  }
+  [data-bc-schema-info-part="1"] [data-bc-part-related-cell]{
+    width: 100%;
+    margin: 0;
+  }
+  .MobileFooter {
+    overflow: hidden;
+  }
+  .Home-mobile header::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #262627 0%, rgba(38, 38, 39, 0.75) 47.5%, rgba(38, 38, 39, 0) 100%);
+    z-index: -1;
+  }
+
+  main.Home-mobile .Section-2 .slide-inner::before{
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    width: 100%;
+    height: 55%;
+    background-color: #ffffffcc;
+z-index: 1;
+  }
+  main.Home-mobile .Section-2 .Title-1,
+  main.Home-mobile .Section-2 .Title-2,
+  main.Home-mobile .Section-2 .Text,
+  main.Home-mobile .Section-2 .Btn  {
+position: relative;
+z-index: 5;
+  }
+.Menu-Container::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-color: #FFFFFFBF;
+  backdrop-filter: blur(10px);
+}
+header .searchIconHeader:hover svg path{
+  stroke: #8f993c !important;
+}
+.Search-Container .Text p{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+footer .bgsec{
+  background-position: 50%;
+  background-origin: border-box;
+  background-position-y: -5em;
+}

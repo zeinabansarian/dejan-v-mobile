@@ -25,16 +25,43 @@ setTimeout(()=>{
     duration:.5
     })
  
-gsap.to(".Loading-Container svg", {
-  opacity: 0,
-  delay: 2,
-  ease: "expo.in",
-});
-gsap.to(".Loading-Container", {
-  scale: 0,
-  delay: 3,
-  ease: "expo.in",
-});
+
+    let lazyVideos = [...document.querySelectorAll("video.lazy")]
+       
+    if ("IntersectionObserver" in window) {
+      let lazyVideoObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(video) {
+          if (video.isIntersecting) {
+            for (let source in video.target.children) {
+              let videoSource = video.target.children[source];
+              if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                videoSource.src = videoSource.dataset.src;
+              }
+            }
+   
+            video.target.load();
+            video.target.classList.remove("lazy");
+            lazyVideoObserver.unobserve(video.target);
+          }
+        });
+       });
+   
+   
+      lazyVideos.forEach(function(lazyVideo) {
+        lazyVideoObserver.observe(lazyVideo);
+      });
+      gsap.to(".Loading-Container svg", {
+        opacity: 0,
+        delay: 8,
+        ease: "expo.in",
+      });
+      gsap.to(".Loading-Container", {
+        opacity: 0,
+        pointerEvents:'none',
+        delay: 8,
+        ease: "expo.in",
+      });
+    }
 
 let slideinner = document.querySelector(".Section-3");
       setTimeout(() => {
@@ -97,23 +124,23 @@ let slideinner = document.querySelector(".Section-3");
                 slideChange: function (e) {
                     let swiper = this;
                  let active =  e.slides[swiper.activeIndex]
-                 if(e.slides[swiper.activeIndex].classList.contains('proj')){
-                    document.querySelector('header').classList.add('dark')
-                    document.querySelector('header').classList.add('darkLogo')
-                 }
-                 if(e.slides[swiper.activeIndex].classList.contains('Section-1')){
-                    document.querySelector('header').classList.remove('dark')
-                    document.querySelector('header').classList.remove('darkLogo')
+                //  if(e.slides[swiper.activeIndex].classList.contains('proj')){
+                //     document.querySelector('header').classList.add('dark')
+                //     document.querySelector('header').classList.add('darkLogo')
+                //  }
+                //  if(e.slides[swiper.activeIndex].classList.contains('Section-1')){
+                //     document.querySelector('header').classList.remove('dark')
+                //     document.querySelector('header').classList.remove('darkLogo')
 
-                 }
-                 if(e.slides[swiper.activeIndex].classList.contains('Section-2')){
-                    document.querySelector('header').classList.add('dark')
-                    document.querySelector('header').classList.add('darkLogo')
-                 }
-                 if(e.slides[swiper.activeIndex].classList.contains('blog')){
-                    document.querySelector('header').classList.remove('dark')
-                    document.querySelector('header').classList.remove('darkLogo')
-                 }
+                //  }
+                //  if(e.slides[swiper.activeIndex].classList.contains('Section-2')){
+                //     document.querySelector('header').classList.add('dark')
+                //     document.querySelector('header').classList.add('darkLogo')
+                //  }
+                //  if(e.slides[swiper.activeIndex].classList.contains('blog')){
+                //     document.querySelector('header').classList.remove('dark')
+                //     document.querySelector('header').classList.remove('darkLogo')
+                //  }
                  swiper.params.touchReleaseOnEdges = false;
                  swiper.params.mousewheel.releaseOnEdges = false;
                   },
@@ -194,26 +221,34 @@ let slideinner = document.querySelector(".Section-3");
                     onLeaveBack: () =>onLeaveBack(),
                 }
                 })
- 
-            // banner slider
-            let SwiperBanner= new Swiper ('.swiper-banner', {
-                slidesPerView: 1,
-                spaceBetween: 0,
-                speed:5000,
-                effect:'fade' ,
-                autoplay:{
-                    delay:0
-                },
-                pagination: {
-                    el: '.Section-1 .swiper-pagination',
-                    clickable: true,
-                    type: 'bullets',
-                    renderBullet: function (index, className) {
-                    return '<span class="' + className + '">'  + '</span>';
-                
-                    }
-                  },
-                }) 
+                setTimeout(() => {
+                  // banner slider
+                  let SwiperBanner= new Swiper ('.swiper-banner', {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    effect:'fade' ,
+                    loop:true,
+                    fadeEffect: {
+                      crossFade: true,
+                    },
+                    autoplay: {
+                      delay:6000,
+                      // delay:7000,
+                      // disableOnInteraction: false,
+                    },
+                   speed:6000,
+                    pagination: {
+                        el: '.Section-1 .swiper-pagination',
+                        clickable: true,
+                        type: 'bullets',
+                        renderBullet: function (index, className) {
+                        return '<span class="' + className + '">'  + '</span>';
+                    
+                        }
+                      },
+                    }) 
+             }, 4000);
+       
                 
 // projects hover
 let projects = document.querySelectorAll('.Project')
@@ -233,7 +268,7 @@ projects.forEach(p=>{
 
     })
 })
-      }, 3000);
+      }, 6000);
  
     })
 
