@@ -273,8 +273,19 @@ a {
 }
   @font-face {
     font-family: "EncodeSans500";
-    src: url("../fonts/EncodeSansCondensed-Medium.ttf") format("ttf");
-    font-weight: 800;
+    src: url("../_fonts/EncodeSansCondensed-Medium.ttf") format("ttf");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "EncodeSans600";
+    src: url("../_fonts/EncodeSans-SemiBold.eot");
+    src: url("../_fonts/EncodeSans-SemiBold.eot?#iefix")
+        format("embedded-opentype"),
+      url("../_fonts/EncodeSans-SemiBold.woff") format("woff"),
+      url("../_fonts/EncodeSans-SemiBold.ttf") format("truetype");
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
   }
@@ -1445,4 +1456,11 @@ footer .bgsec{
   background-position: 50%;
   background-origin: border-box;
   background-position-y: -5em;
+}
+.PointerBox {
+  transform: translateY(-2em);
+  -webkit-transform: translateY(-2em);
+  -moz-transform: translateY(-2em);
+  -ms-transform: translateY(-2em);
+  -o-transform: translateY(-2em);
 }
